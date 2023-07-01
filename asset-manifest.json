@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Dulces-Recuerdos/static/css/main.a243570f.css",
-    "main.js": "/Dulces-Recuerdos/static/js/main.848d06a0.js",
+    "main.js": "/Dulces-Recuerdos/static/js/main.e407743a.js",
     "static/js/787.c4e7f8f9.chunk.js": "/Dulces-Recuerdos/static/js/787.c4e7f8f9.chunk.js",
     "static/media/Passport-2.jpeg": "/Dulces-Recuerdos/static/media/Passport-2.c8d22bf8d7044506c8c7.jpeg",
     "static/media/Passport-3.jpeg": "/Dulces-Recuerdos/static/media/Passport-3.0edd081d77eef31e3df6.jpeg",
@@ -9,11 +9,11 @@
     "static/media/Passport-1.jpeg": "/Dulces-Recuerdos/static/media/Passport-1.d17d25b580fdba111255.jpeg",
     "index.html": "/Dulces-Recuerdos/index.html",
     "main.a243570f.css.map": "/Dulces-Recuerdos/static/css/main.a243570f.css.map",
-    "main.848d06a0.js.map": "/Dulces-Recuerdos/static/js/main.848d06a0.js.map",
+    "main.e407743a.js.map": "/Dulces-Recuerdos/static/js/main.e407743a.js.map",
     "787.c4e7f8f9.chunk.js.map": "/Dulces-Recuerdos/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a243570f.css",
-    "static/js/main.848d06a0.js"
+    "static/js/main.e407743a.js"
   ]
 }
