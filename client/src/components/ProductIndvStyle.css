@@ -1,0 +1,19 @@
+.image-container-mine {
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%; /* Establece un 1:1 de relación de aspecto */
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	padding-left: 0% !important;
+}
+.image-container-mine img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.pb-zero-img-f {
+	padding-bottom: 0;
+}

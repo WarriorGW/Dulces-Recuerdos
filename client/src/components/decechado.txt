@@ -1,0 +1,22 @@
+###### de ProductIndv
+
+{/* <div className="image-container-mine pl-2">
+				<img
+					src={require(`../img/Passport-${props.imageNum}.jpeg`)}
+					className="img-fluid"
+					alt="Catalog Image"
+				/>
+			</div>
+			<ul className="list-group text-center"> */}
+			{/* <li className="list-group-item">
+					<img
+						src={require(`../img/Passport-${props.imageNum}.jpeg`)}
+						className="img-fluid"
+						alt="Catalog Image"
+					/>
+				</li> */}
+			{/* <li className="list-group-item">Aqui va el titulo del articulo</li>
+				<li className="list-group-item">Aqui va una pequeña descripcion</li>
+				<li className="list-group-item">$9,000</li>
+			</ul>
+			<br /> */}
