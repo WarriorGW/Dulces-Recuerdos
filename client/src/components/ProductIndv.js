@@ -21,16 +21,13 @@ function ProductIndv(props) {
 					alt="..."
 					style={{ objectFit: "cover", height: "100%" }}
 				/>
-				<div class="card-body">
+				<div class="card-body" style={{ paddingBottom: "1vh" }}>
 					<p class="card-title">Titulo</p>
 					<p class="card-text">
 						Some quick example text to build on the card title and make up the
 						bulk of the card's content.
 					</p>
-					<p
-						class="card-footer"
-						style={{ marginBottom: "0px", paddingBottom: "0px" }}
-					>
+					<p class="card-footer" style={{ marginBottom: "0px" }}>
 						$600.00
 					</p>
 				</div>

@@ -1,16 +1,11 @@
 import "./App.css";
 //import aos from "aos";
 //import axios from "axios";
-import {
-	BrowserRouter,
-	Routes,
-	Route,
-	HashRouter,
-	Link,
-} from "react-router-dom";
+import { Routes, Route, HashRouter, Link } from "react-router-dom";
 import ListProduct from "./components/ListProduct";
 import CreatePage from "./components/CreatePage";
 import Logint from "./components/Logint";
+import Logo from "./assets/dulcesimg-removebg.png";
 
 /*
 (default) slash /#/   /#/route
@@ -25,6 +20,7 @@ function App() {
 				<nav className="navbar navbar-expand-lg bg-dark navbar-dark">
 					<div className="container-fluid">
 						<Link className="navbar-brand" to="/">
+							<img src={Logo} className="logus"></img>
 							Dulces Recuerdos
 						</Link>
 						<button
