@@ -5,6 +5,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import * as bootstrap from "bootstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
+// Algunas animaciones cuando entras a la pagina
+import "animate.css/animate.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

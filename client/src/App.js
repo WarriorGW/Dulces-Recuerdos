@@ -4,6 +4,8 @@ import "./App.css";
 import { Routes, Route, HashRouter, Link } from "react-router-dom";
 import ListProduct from "./components/ListProduct";
 import CreatePage from "./components/CreatePage";
+import EditObj from "./components/EditObj";
+import About from "./components/About";
 import Logint from "./components/Logint";
 import Logo from "./assets/dulcesimg-removebg.png";
 
@@ -50,7 +52,7 @@ function App() {
 									</Link>
 								</li>
 								<li className="nav-item">
-									<Link className="nav-link" to="/CrearNuevo">
+									<Link className="nav-link" to="/Editar">
 										Editar
 									</Link>
 								</li>
@@ -79,7 +81,7 @@ function App() {
 											<hr className="dropdown-divider" />
 										</li>
 										<li>
-											<Link className="dropdown-item" to="/">
+											<Link className="dropdown-item" to="/About">
 												About me
 											</Link>
 										</li>
@@ -108,7 +110,9 @@ function App() {
 				<Routes>
 					<Route path="/" element={<ListProduct />} exact></Route>
 					<Route path="/CrearNuevo" element={<CreatePage />} exact></Route>
+					<Route path="/Editar" element={<EditObj />} exact></Route>
 					<Route path="/Logint" element={<Logint />} exact></Route>
+					<Route path="/About" element={<About />} exact></Route>
 				</Routes>
 			</HashRouter>
 		</div>

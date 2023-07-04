@@ -11,11 +11,11 @@ function ProductIndv(props) {
 
 	if (!props.imageNum || !props.titulo || !props.descr || !props.precio) {
 		return (
-			<div
-				className="col-sm-3 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center mb-5"
-				data-aos="flip-right"
-			>
-				<div class="card" style={{ width: "18rem" }}>
+			<div className="col-sm-3 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center mb-5">
+				<div
+					class="card animate__animated animate__pulse"
+					style={{ width: "18rem" }}
+				>
 					<img
 						src={require(`../img/default.png`)}
 						class="card-img-top img-fluid"
@@ -37,11 +37,11 @@ function ProductIndv(props) {
 	}
 
 	return (
-		<div
-			className="col-sm-3 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center mb-5"
-			data-aos="flip-right"
-		>
-			<div class="card" style={{ width: "18rem" }}>
+		<div className="col-sm-3 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center mb-5">
+			<div
+				class="card animate__animated animate__bounceIn"
+				style={{ width: "18rem" }}
+			>
 				<img
 					src={require(`../img/Passport-${props.imageNum}.jpeg`)}
 					class="card-img-top img-fluid mx-height"

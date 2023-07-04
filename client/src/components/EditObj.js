@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function CreatePage() {
+function EditObj() {
 	const [numericValue, setNumericValue] = useState("");
 
 	const handleInputChange = (event) => {
@@ -11,7 +11,7 @@ function CreatePage() {
 	return (
 		<div className="container">
 			<h1 className="mb-5 mt-5 text-center">
-				Version preliminar de creacion de articulos para el catalogo
+				Version preliminar de edicion de articulos para el catalogo
 			</h1>
 			<div className="container">
 				<div className="row">
@@ -53,21 +53,11 @@ function CreatePage() {
 							</div>
 						</div>
 						<div class="form-group mb-3">
-							<label for="imageInput" className="mb-2">
-								Seleccionar imagen:&nbsp;&nbsp;
-							</label>
-							<br />
+							<label for="imageInput">Seleccionar imagen:&nbsp;&nbsp;</label>
 							<input type="file" class="form-control-file" id="imageInput" />
 						</div>
 						<div className="form-group mb-3">
-							<label for="selectInput" className="mb-2">
-								Categoría
-							</label>
-							<select
-								class="form-select"
-								id="selectInput"
-								aria-label="Default select example"
-							>
+							<select class="form-select" aria-label="Default select example">
 								<option selected>Selecciona de que categoría es</option>
 								<option value="1">Porta Pasaportes</option>
 								<option value="2">Camisa personalizada</option>
@@ -89,4 +79,4 @@ function CreatePage() {
 	);
 }
 
-export default CreatePage;
+export default EditObj;
