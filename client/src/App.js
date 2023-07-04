@@ -17,10 +17,10 @@ function App() {
 	return (
 		<div className="app">
 			<HashRouter hashType="slash">
-				<nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+				<nav className="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
 					<div className="container-fluid">
 						<Link className="navbar-brand" to="/">
-							<img src={Logo} className="logus"></img>
+							<img src={Logo} alt="Logo" className="logus"></img>
 							Dulces Recuerdos
 						</Link>
 						<button
@@ -47,6 +47,11 @@ function App() {
 								<li className="nav-item">
 									<Link className="nav-link" to="/CrearNuevo">
 										Crear Nuevo
+									</Link>
+								</li>
+								<li className="nav-item">
+									<Link className="nav-link" to="/CrearNuevo">
+										Editar
 									</Link>
 								</li>
 								<li className="nav-item dropdown">
@@ -85,6 +90,7 @@ function App() {
 							</li> */}
 							</ul>
 							<form className="d-flex" role="search">
+								<span className="material-symbols-outlined">Sort</span>
 								<input
 									className="form-control me-2"
 									type="search"

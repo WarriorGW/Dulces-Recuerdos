@@ -37,28 +37,41 @@ function CreatePage() {
 							<label for="InputPrecio1" class="form-label">
 								Precio
 							</label>
-							<input
-								type="text"
-								class="form-control"
-								id="InputPrecio1"
-								pattern="[0-9]*"
-								inputmode="numeric"
-								value={numericValue}
-								onChange={handleInputChange}
-							/>
+							<div class="input-group mb-3">
+								<span class="input-group-text">$</span>
+								<input
+									type="text"
+									class="form-control"
+									aria-label="Amount (to the nearest dollar)"
+									id="InputPrecio1"
+									pattern="[0-9]*"
+									inputmode="numeric"
+									value={numericValue}
+									onChange={handleInputChange}
+								/>
+								<span class="input-group-text">.00</span>
+							</div>
 						</div>
-						<div class="form-group">
+						<div class="form-group mb-3">
 							<label for="imageInput">Seleccionar imagen:&nbsp;&nbsp;</label>
 							<input type="file" class="form-control-file" id="imageInput" />
 						</div>
-						<div class="mb-3 form-check"></div>
-						<button type="submit" class="btn btn-primary">
-							Pre-visualizar
-						</button>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<button type="submit" class="btn btn-danger">
-							Cancelar
-						</button>
+						<div className="form-group mb-3">
+							<select class="form-select" aria-label="Default select example">
+								<option selected>Selecciona de que categoría es</option>
+								<option value="1">Porta Pasaportes</option>
+								<option value="2">Camisa personalizada</option>
+								<option value="3">Cilindro personalizado</option>
+							</select>
+						</div>
+						<div class="d-flex justify-content-center gap-3">
+							<button type="submit" class="btn btn-primary">
+								Pre-visualizar
+							</button>
+							<button type="button" class="btn btn-danger">
+								Cancelar
+							</button>
+						</div>
 					</form>
 				</div>
 			</div>

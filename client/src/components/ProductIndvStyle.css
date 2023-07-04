@@ -9,6 +9,7 @@
 .card-body {
 	padding-bottom: 1vh; /* Ajusta el valor según tus necesidades */
 	height: auto !important;
+	/* background-color: #e15e60; */
 }
 
 .inner-descr {
@@ -17,7 +18,7 @@
 	-webkit-line-clamp: 4;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	color: #4b4e56;
+	color: #27272e;
 }
 
 .inner-tit {
