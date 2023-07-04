@@ -1,19 +1,33 @@
-.image-container-mine {
-	width: 100%;
-	height: 0;
-	padding-bottom: 100%; /* Establece un 1:1 de relación de aspecto */
-	position: relative;
-	overflow: hidden;
-	margin: 0 auto;
-	padding-left: 0% !important;
-}
-.image-container-mine img {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
 .pb-zero-img-f {
 	padding-bottom: 0;
+}
+
+.card {
+	max-height: 25rem !important;
+}
+
+.card-body {
+	padding-bottom: 1vh; /* Ajusta el valor según tus necesidades */
+	height: auto !important;
+}
+
+.inner-descr {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #4b4e56;
+}
+
+.inner-tit {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.mx-height {
+	max-height: 50%;
 }

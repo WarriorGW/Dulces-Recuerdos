@@ -15,7 +15,7 @@ hashbang /#!/   /#!/route
 
 function App() {
 	return (
-		<div>
+		<div className="app">
 			<HashRouter hashType="slash">
 				<nav className="navbar navbar-expand-lg bg-dark navbar-dark">
 					<div className="container-fluid">
@@ -75,7 +75,7 @@ function App() {
 										</li>
 										<li>
 											<Link className="dropdown-item" to="/">
-												Something else here
+												About me
 											</Link>
 										</li>
 									</ul>

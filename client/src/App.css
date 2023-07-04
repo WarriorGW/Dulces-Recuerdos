@@ -3,3 +3,8 @@
 	max-width: 25px;
 	margin-right: 1vh;
 }
+
+.font-from-s {
+	font-family: "Vag Rounded Black", cursive !important;
+	font-weight: lighter !important;
+}
