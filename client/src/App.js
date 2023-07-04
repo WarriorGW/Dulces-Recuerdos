@@ -5,6 +5,7 @@ import { Routes, Route, HashRouter, Link } from "react-router-dom";
 import ListProduct from "./components/ListProduct";
 import CreatePage from "./components/CreatePage";
 import EditObj from "./components/EditObj";
+import Detalles from "./components/Detalles";
 import About from "./components/About";
 import Logint from "./components/Logint";
 import Logo from "./assets/dulcesimg-removebg.png";
@@ -41,22 +42,22 @@ function App() {
 							id="navbarSupportedContent"
 						>
 							<ul className="navbar-nav me-auto mb-2 mb-lg-0">
-								<li className="nav-item">
+								<li className="nav-item mx-2">
 									<Link className="nav-link active" to="/">
 										Inicio
 									</Link>
 								</li>
-								<li className="nav-item">
+								<li className="nav-item mx-2">
 									<Link className="nav-link" to="/CrearNuevo">
 										Crear Nuevo
 									</Link>
 								</li>
-								<li className="nav-item">
+								<li className="nav-item mx-2">
 									<Link className="nav-link" to="/Editar">
-										Editar
+										Editar articulo
 									</Link>
 								</li>
-								<li className="nav-item dropdown">
+								<li className="nav-item dropdown mx-2">
 									<Link
 										className="nav-link dropdown-toggle"
 										to="/"
@@ -111,6 +112,7 @@ function App() {
 					<Route path="/" element={<ListProduct />} exact></Route>
 					<Route path="/CrearNuevo" element={<CreatePage />} exact></Route>
 					<Route path="/Editar" element={<EditObj />} exact></Route>
+					<Route path="/Detalles" element={<Detalles />} exact></Route>
 					<Route path="/Logint" element={<Logint />} exact></Route>
 					<Route path="/About" element={<About />} exact></Route>
 				</Routes>

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./ProductIndvStyle.css";
@@ -38,9 +39,10 @@ function ProductIndv(props) {
 
 	return (
 		<div className="col-sm-3 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center mb-5">
-			<div
-				class="card animate__animated animate__bounceIn"
+			<Link
+				class="card card-link animate__animated animate__bounceIn"
 				style={{ width: "18rem" }}
+				to={"/Detalles"}
 			>
 				<img
 					src={require(`../img/Passport-${props.imageNum}.jpeg`)}
@@ -57,7 +59,7 @@ function ProductIndv(props) {
 					{/* <p class="" style={{ marginBottom: "0px" }}></p> */}
 				</div>
 				<div className="card-footer">Desde: {props.precio}</div>
-			</div>
+			</Link>
 		</div>
 	);
 }
