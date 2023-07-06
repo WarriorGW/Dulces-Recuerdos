@@ -1,0 +1,6 @@
+.img-det-container {
+	width: 15rem !important;
+	height: 15rem !important;
+	overflow: hidden;
+	object-fit: cover;
+}

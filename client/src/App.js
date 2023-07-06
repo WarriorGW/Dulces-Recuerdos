@@ -93,7 +93,6 @@ function App() {
 							</li> */}
 							</ul>
 							<form className="d-flex" role="search">
-								<span className="material-symbols-outlined">Sort</span>
 								<input
 									className="form-control me-2"
 									type="search"
