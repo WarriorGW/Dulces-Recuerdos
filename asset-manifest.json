@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Dulces-Recuerdos/static/css/main.6b4cf2d8.css",
+    "main.css": "/Dulces-Recuerdos/static/css/main.f2e9ddb0.css",
     "main.js": "/Dulces-Recuerdos/static/js/main.d96e3696.js",
     "static/js/787.c4e7f8f9.chunk.js": "/Dulces-Recuerdos/static/js/787.c4e7f8f9.chunk.js",
     "static/media/Passport-5.jpeg": "/Dulces-Recuerdos/static/media/Passport-5.07034605a13ef1f8fbab.jpeg",
@@ -20,12 +20,12 @@
     "static/media/carousel-2.jpg": "/Dulces-Recuerdos/static/media/carousel-2.b8023e36d2d64d8301d6.jpg",
     "static/media/carousel-1.jpg": "/Dulces-Recuerdos/static/media/carousel-1.cc7f2f12bc1a59e27fa5.jpg",
     "index.html": "/Dulces-Recuerdos/index.html",
-    "main.6b4cf2d8.css.map": "/Dulces-Recuerdos/static/css/main.6b4cf2d8.css.map",
+    "main.f2e9ddb0.css.map": "/Dulces-Recuerdos/static/css/main.f2e9ddb0.css.map",
     "main.d96e3696.js.map": "/Dulces-Recuerdos/static/js/main.d96e3696.js.map",
     "787.c4e7f8f9.chunk.js.map": "/Dulces-Recuerdos/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b4cf2d8.css",
+    "static/css/main.f2e9ddb0.css",
     "static/js/main.d96e3696.js"
   ]
 }
