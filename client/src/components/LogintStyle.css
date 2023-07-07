@@ -4,7 +4,14 @@
 	font-weight: 300;
 	line-height: 1.7;
 	color: #ffeba7;
-	background-color: #1f2029;
+	/* background-color: #1f2029; */
+	background: rgb(219, 169, 206);
+	background: linear-gradient(
+		0deg,
+		rgba(219, 169, 206, 1) 0%,
+		rgba(134, 153, 209, 1) 90%,
+		rgba(33, 37, 41, 1) 100%
+	);
 }
 a:hover {
 	text-decoration: none;
@@ -99,6 +106,7 @@ h6 span {
 	background-image: url("../img/subtle-prism.png");
 	position: absolute;
 	border-radius: 6px;
+	transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 }
 .card-back {
@@ -134,9 +142,11 @@ h6 span {
 	line-height: 22px;
 	letter-spacing: 0.5px;
 	outline: none;
-	color: #c4c3ca;
-	background-color: #1f2029;
-	border: none;
+	/*Color de la fuente del input*/
+	color: #414141;
+	/* background-color: #1f2029; */
+	background-color: #1b2e4741;
+	border: 1px white solid;
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear;
 	box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
@@ -158,6 +168,10 @@ h6 span {
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear;
 }
+input::placeholder,
+textarea::placeholder {
+	color: #ffffff94; /* Cambia el color del placeholder según tus preferencias */
+}
 .btn {
 	border-radius: 4px;
 	height: 44px;
@@ -172,8 +186,10 @@ h6 span {
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	align-items: center;
-	background-color: #ffeba7;
 	color: #000000;
+}
+.btn-logsign {
+	background-color: #ffeba7 !important;
 }
 .btn:hover {
 	background-color: #000000;

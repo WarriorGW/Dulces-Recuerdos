@@ -38,14 +38,16 @@ function Logint() {
 														<input
 															type="password"
 															className="form-style"
-															placeholder="Password"
+															placeholder="Contraseña"
 														/>
 														<i className="input-icon uil uil-lock-alt"></i>
 													</div>
-													<button className="btn mt-4">Login</button>
+													<button className="btn mt-4 btn-logsign">
+														Log-In
+													</button>
 													<p className="mb-0 mt-4 text-center">
 														<a href="/" className="link">
-															Forgot your password?
+															Olvidaste tu contraseña?
 														</a>
 													</p>
 												</div>
@@ -60,7 +62,7 @@ function Logint() {
 															<input
 																type="text"
 																className="form-style"
-																placeholder="Full Name"
+																placeholder="Nombre"
 																name="name"
 															/>
 															<i className="input-icon uil uil-user"></i>
@@ -69,7 +71,7 @@ function Logint() {
 															<input
 																type="tel"
 																className="form-style"
-																placeholder="Phone Number"
+																placeholder="Numero de Telefono"
 																name="phone"
 															/>
 															<i className="input-icon uil uil-phone"></i>
@@ -87,17 +89,17 @@ function Logint() {
 															<input
 																type="password"
 																className="form-style"
-																placeholder="Password"
+																placeholder="Contraseña"
 																name="pass"
 															/>
 															<i className="input-icon uil uil-lock-alt"></i>
 														</div>
 														<button
 															type="submit"
-															className="btn mt-4"
+															className="btn mt-4 btn-logsign"
 															name="send"
 														>
-															Register
+															Registrase
 														</button>
 													</form>
 												</div>

@@ -12,7 +12,7 @@ function ProductIndv(props) {
 
 	if (!props.imageNum || !props.titulo || !props.descr || !props.precio) {
 		return (
-			<div className="col-sm-3 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center mb-5">
+			<div className="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex justify-content-center mb-5">
 				<div
 					className="card animate__animated animate__pulse"
 					style={{ width: "18rem" }}
@@ -38,7 +38,7 @@ function ProductIndv(props) {
 	}
 
 	return (
-		<div className="col-sm-3 col-md-4 col-lg-3 col-xl-2 d-flex justify-content-center mb-5">
+		<div className="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex justify-content-center mb-5">
 			<Link
 				className="card card-link animate__animated animate__bounceIn"
 				style={{ width: "18rem" }}
