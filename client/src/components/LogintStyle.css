@@ -191,6 +191,9 @@ textarea::placeholder {
 .btn-logsign {
 	background-color: #ffeba7 !important;
 }
+.btn-logsign:hover {
+	background-color: #ffeaa73d !important;
+}
 .btn:hover {
 	background-color: #000000;
 	color: #ffeba7;

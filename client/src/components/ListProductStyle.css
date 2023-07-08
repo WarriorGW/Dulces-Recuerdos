@@ -1,4 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap");
+
 .carousel {
 	width: auto !important;
 	max-width: 60vh;
+}
+
+.mooh-lah-lah {
+	font-family: "Moo Lah Lah" !important;
 }
