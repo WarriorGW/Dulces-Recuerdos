@@ -1,6 +1,26 @@
-.img-det-container {
-	width: 15rem !important;
-	height: 15rem !important;
+.square-image-container {
+	width: 100%;
+	padding-top: 100%; /* Establece un 1:1 de relación de aspecto */
+	border-radius: 1vh;
+	position: relative;
 	overflow: hidden;
+}
+
+.square-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
+}
+
+.description-text {
+	font-size: 1.2rem;
+}
+
+.btn-person {
+	background-color: #545454;
+	color: white;
+	font-weight: bold;
 }
