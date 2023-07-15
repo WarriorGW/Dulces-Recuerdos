@@ -1,16 +1,25 @@
-.pb-zero-img-f {
-	padding-bottom: 0;
+.card-container-c .card {
+	max-height: 25rem;
+	transition: transform 75ms ease-in-out;
 }
-
-.card {
-	max-height: 25rem !important;
-	transition: transform 0.3s ease-in-out !important;
+.card-container-c .card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-body {
 	padding-bottom: 1vh; /* Ajusta el valor según tus necesidades */
 	height: auto !important;
 	/* background-color: #e15e60; */
+}
+
+.card:hover {
+	transform: scale(1.05) !important;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-link {
+	text-decoration: none;
 }
 
 .inner-descr {
@@ -32,13 +41,4 @@
 
 .mx-height {
 	max-height: 50%;
-}
-
-.card:hover {
-	transform: scale(1.05) !important;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.card-link {
-	text-decoration: none;
 }

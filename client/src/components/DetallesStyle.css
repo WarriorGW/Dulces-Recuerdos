@@ -20,7 +20,7 @@
 }
 
 .btn-person {
-	background-color: #545454;
-	color: white;
-	font-weight: bold;
+	background-color: #545454 !important;
+	color: white !important;
+	font-weight: bold !important;
 }

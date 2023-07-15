@@ -41,7 +41,7 @@ function Detalles() {
 						</p>
 						<div className="mt-auto d-flex justify-content-between align-items-center">
 							<h2>Precio: Desde ${productDetails.price}</h2>
-							<button className="btn btn-person">Agregar al carrito</button>
+							<button className="btn btn-person">Volver</button>
 						</div>
 					</div>
 				</div>

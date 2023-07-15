@@ -38,9 +38,9 @@ function ProductIndv(props) {
 	}
 
 	return (
-		<div className="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex justify-content-center mb-5">
+		<div className="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex justify-content-center mb-5 card-container-c">
 			<Link
-				className="card card-link animate__animated animate__bounceIn"
+				className="card card-link"
 				style={{ width: "18rem" }}
 				to={"/Detalles"}
 			>
@@ -49,6 +49,7 @@ function ProductIndv(props) {
 					className="card-img-top img-fluid mx-height"
 					alt="..."
 					style={{ objectFit: "cover", height: "100%" }}
+					draggable={false}
 				/>
 				<div className="card-body " style={{ paddingBottom: "1vh" }}>
 					<h5 className="card-title inner-tit">{props.titulo}</h5>

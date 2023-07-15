@@ -6,9 +6,10 @@ import ListProduct from "./components/ListProduct";
 import CreatePage from "./components/CreatePage";
 import EditObj from "./components/EditObj";
 import Detalles from "./components/Detalles";
-import About from "./components/About";
+import About from "./pages/About";
 import Logint from "./components/Logint";
 import Logo from "./assets/dulcesimg-removebg.png";
+import CustomCarousel from "./components/CustomCarousel";
 
 /*
 (default) slash /#/   /#/route
@@ -23,7 +24,12 @@ function App() {
 				<nav className="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
 					<div className="container-fluid">
 						<Link className="navbar-brand" to="/">
-							<img src={Logo} alt="Logo" className="logus"></img>
+							<img
+								src={Logo}
+								alt="Logo"
+								className="logus"
+								draggable="false"
+							></img>
 							Dulces Recuerdos
 						</Link>
 						<button
@@ -57,6 +63,17 @@ function App() {
 										Editar articulo
 									</Link>
 								</li>
+								{/* Aqui esta el link de las pruebas, pongo esto para encontrarlo mas facilmente */}
+								{/* <li className="nav-item mx-2">
+									<Link className="nav-link" to="/Pruebas">
+										Pruebas
+									</Link>
+								</li>
+								<li className="nav-item mx-2">
+									<Link className="nav-link" to="/Pruebas2">
+										Pruebas 2
+									</Link>
+								</li> */}
 								<li className="nav-item dropdown mx-2">
 									<Link
 										className="nav-link dropdown-toggle"
