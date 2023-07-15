@@ -1,5 +1,5 @@
 import React from "react";
-import "./LogintStyle.css";
+import "./css/LogintStyle.css";
 
 function Logint() {
 	return (

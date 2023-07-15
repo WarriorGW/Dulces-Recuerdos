@@ -1,8 +1,8 @@
-import ProductIndv from "./ProductIndv";
+import ProductIndv from "../components/ProductIndv";
 import React from "react";
-import Galeria from "./Galeria";
-import "./ListProductStyle.css";
-import CustomCarousel from "./CustomCarousel";
+import Galeria from "../components/Galeria";
+import "./css/ListProductStyle.css";
+import CustomCarousel from "../components/CustomCarousel";
 
 function ListProduct() {
 	return (

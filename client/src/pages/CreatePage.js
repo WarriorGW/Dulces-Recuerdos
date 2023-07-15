@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./CreatePageStyle.css";
+import "./css/CreatePageStyle.css";
 
 function CreatePage() {
 	const [numericValue, setNumericValue] = useState("");

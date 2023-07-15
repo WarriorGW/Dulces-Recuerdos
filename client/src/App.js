@@ -2,14 +2,13 @@ import "./App.css";
 //import aos from "aos";
 //import axios from "axios";
 import { Routes, Route, HashRouter, Link } from "react-router-dom";
-import ListProduct from "./components/ListProduct";
-import CreatePage from "./components/CreatePage";
-import EditObj from "./components/EditObj";
-import Detalles from "./components/Detalles";
+import ListProduct from "./pages/ListProduct";
+import CreatePage from "./pages/CreatePage";
+import EditObj from "./pages/EditObj";
+import Detalles from "./pages/Detalles";
 import About from "./pages/About";
-import Logint from "./components/Logint";
+import Logint from "./pages/Logint";
 import Logo from "./assets/dulcesimg-removebg.png";
-import CustomCarousel from "./components/CustomCarousel";
 
 /*
 (default) slash /#/   /#/route

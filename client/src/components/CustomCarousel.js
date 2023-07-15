@@ -1,5 +1,5 @@
 import React from "react";
-import "./CarouselGPTStyle.css";
+import "./CustomCarouselStyle.css";
 import GaleriaC from "../assets/galeriaC";
 
 import { Swiper, SwiperSlide } from "swiper/react";
