@@ -22,7 +22,7 @@ function App() {
 			<HashRouter hashType="slash">
 				<nav className="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
 					<div className="container-fluid">
-						<a className="navbar-brand" href="/">
+						<a className="navbar-brand" href="/Dulces-Recuerdos/">
 							<img
 								src={Logo}
 								alt="Logo"
