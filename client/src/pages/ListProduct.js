@@ -8,7 +8,7 @@ function ListProduct() {
 	return (
 		<div className="background-general">
 			<div className="container">
-				<h1 className="mb-4 mt-4 font-from-s animate__animated animate__bounceIn text-center mooh-lah-lah display-1">
+				<h1 className="mb-0 mt-4 font-from-s animate__animated animate__bounceIn text-center mooh-lah-lah display-1">
 					Catálogo
 				</h1>
 				<CustomCarousel />

@@ -22,7 +22,7 @@ function App() {
 			<HashRouter hashType="slash">
 				<nav className="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
 					<div className="container-fluid">
-						<Link className="navbar-brand" to="/">
+						<a className="navbar-brand" href="/">
 							<img
 								src={Logo}
 								alt="Logo"
@@ -30,7 +30,7 @@ function App() {
 								draggable="false"
 							></img>
 							Dulces Recuerdos
-						</Link>
+						</a>
 						<button
 							className="navbar-toggler"
 							type="button"
