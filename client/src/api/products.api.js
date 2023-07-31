@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL_HOME = "http://192.168.1.67:4000"; // Reemplaza con la dirección IP del servidor
+const BASE_URL_HOME = "https://server-dr.vercel.app/"; // Reemplaza con la dirección IP del servidor
 
 export const getProductsReq = async () => {
 	return await axios.get(`${BASE_URL_HOME}/products`);
