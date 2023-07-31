@@ -73,6 +73,8 @@ function Logint() {
 																className="form-style"
 																placeholder="Numero de Telefono"
 																name="phone"
+																minLength={10}
+																maxLength={10}
 															/>
 															<i className="input-icon uil uil-phone"></i>
 														</div>

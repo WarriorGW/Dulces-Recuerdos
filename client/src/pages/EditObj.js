@@ -138,6 +138,7 @@ function EditObj() {
 													inputMode="numeric"
 													value={values.precio}
 													onChange={handleChange}
+													maxLength={10}
 												/>
 												<span className="input-group-text">.00</span>
 											</div>
