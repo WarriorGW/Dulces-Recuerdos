@@ -9,6 +9,8 @@ import Detalles from "./pages/Detalles";
 import About from "./pages/About";
 import Logint from "./pages/Logint";
 import Logo from "./assets/dulcesimg-removebg.png";
+import Tablas from "./tests/Tablas";
+import { ProductsContextProvider } from "./context/ProductsContext";
 
 /*
 (default) slash /#/   /#/route
@@ -18,7 +20,7 @@ hashbang /#!/   /#!/route
 
 function App() {
 	return (
-		<div className="app">
+		<ProductsContextProvider>
 			<HashRouter hashType="slash">
 				<nav className="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
 					<div className="container-fluid">
@@ -58,17 +60,17 @@ function App() {
 									</Link>
 								</li>
 								<li className="nav-item mx-2">
-									<Link className="nav-link" to="/Editar">
+									<Link className="nav-link" to="/Editando">
 										Editar articulo
 									</Link>
 								</li>
 								{/* Aqui esta el link de las pruebas, pongo esto para encontrarlo mas facilmente */}
-								{/* <li className="nav-item mx-2">
-									<Link className="nav-link" to="/Pruebas">
+								<li className="nav-item mx-2">
+									<Link className="nav-link" to="/Test1">
 										Pruebas
 									</Link>
 								</li>
-								<li className="nav-item mx-2">
+								{/* <li className="nav-item mx-2">
 									<Link className="nav-link" to="/Pruebas2">
 										Pruebas 2
 									</Link>
@@ -126,13 +128,15 @@ function App() {
 				<Routes>
 					<Route path="/" element={<ListProduct />} exact></Route>
 					<Route path="/CrearNuevo" element={<CreatePage />} exact></Route>
-					<Route path="/Editar" element={<EditObj />} exact></Route>
+					<Route path="/Editando" element={<EditObj />} exact></Route>
+					<Route path="/Editar/:id" element={<EditObj />} exact></Route>
 					<Route path="/Detalles" element={<Detalles />} exact></Route>
 					<Route path="/Logint" element={<Logint />} exact></Route>
 					<Route path="/About" element={<About />} exact></Route>
+					<Route path="/Test1" element={<Tablas />} exact></Route>
 				</Routes>
 			</HashRouter>
-		</div>
+		</ProductsContextProvider>
 	);
 }
 
