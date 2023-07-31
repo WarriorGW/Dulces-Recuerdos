@@ -33,8 +33,8 @@ function CustomCarousel() {
 					}}
 					// navigation
 					scrollbar={{ draggable: true }}
-					onSlideChange={() => console.log("slide change")}
-					onSwiper={(swiper) => console.log(swiper)}
+					// onSlideChange={() => console.log("slide change")}
+					// onSwiper={(swiper) => console.log(swiper)}
 				>
 					{GaleriaC.map((catalogue) => (
 						<SwiperSlide key={catalogue.id} className="slider mt-2">
