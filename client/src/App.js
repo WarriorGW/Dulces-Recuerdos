@@ -10,6 +10,9 @@ import About from "./pages/About";
 import Logint from "./pages/Logint";
 import Logo from "./assets/dulcesimg-removebg.png";
 import Tablas from "./tests/Tablas";
+import Productos from "./tests/Productos";
+import Categorias from "./tests/Categorias";
+import Usuario from "./tests/Usuario";
 import { ProductsContextProvider } from "./context/ProductsContext";
 
 /*
@@ -65,11 +68,11 @@ function App() {
 									</Link>
 								</li>
 								{/* Aqui esta el link de las pruebas, pongo esto para encontrarlo mas facilmente */}
-								<li className="nav-item mx-2">
+								{/* <li className="nav-item mx-2">
 									<Link className="nav-link" to="/Test1">
 										Pruebas
 									</Link>
-								</li>
+								</li> */}
 								{/* <li className="nav-item mx-2">
 									<Link className="nav-link" to="/Pruebas2">
 										Pruebas 2
@@ -104,6 +107,24 @@ function App() {
 												About me
 											</Link>
 										</li>
+										<li>
+											<hr className="dropdown-divider" />
+										</li>
+										<li>
+											<Link className="dropdown-item" to="/Productos">
+												Productos
+											</Link>
+										</li>
+										<li>
+											<Link className="dropdown-item" to="/Categorias">
+												Categorias
+											</Link>
+										</li>
+										<li>
+											<Link className="dropdown-item" to="/Usuario">
+												Usuarios
+											</Link>
+										</li>
 									</ul>
 								</li>
 								{/* <li className="nav-item">
@@ -133,7 +154,9 @@ function App() {
 					<Route path="/Detalles" element={<Detalles />} exact></Route>
 					<Route path="/Logint" element={<Logint />} exact></Route>
 					<Route path="/About" element={<About />} exact></Route>
-					<Route path="/Test1" element={<Tablas />} exact></Route>
+					<Route path="/Productos" element={<Productos />} exact></Route>
+					<Route path="/Categorias" element={<Categorias />} exact></Route>
+					<Route path="/Usuario" element={<Usuario />} exact></Route>
 				</Routes>
 			</HashRouter>
 		</ProductsContextProvider>
