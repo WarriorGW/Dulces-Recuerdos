@@ -9,7 +9,7 @@ import Detalles from "./pages/Detalles";
 import About from "./pages/About";
 import Logint from "./pages/Logint";
 import Logo from "./assets/dulcesimg-removebg.png";
-import Tablas from "./tests/Tablas";
+// import Tablas from "./tests/Tablas";
 import Productos from "./tests/Productos";
 import Categorias from "./tests/Categorias";
 import Usuario from "./tests/Usuario";

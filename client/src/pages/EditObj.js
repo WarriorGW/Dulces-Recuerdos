@@ -38,6 +38,16 @@ function EditObj() {
 		};
 		loadProduct();
 		loadCategories();
+
+		// Contador del text area, con limite de 200
+		const mensaje = document.getElementById("TextAreaDescr");
+		const contador = document.getElementById("contador");
+		mensaje.addEventListener("input", function (e) {
+			const target = e.target;
+			const longitudMax = target.getAttribute("maxlength");
+			const longitudAct = target.value.length;
+			contador.innerHTML = `${longitudAct}/${longitudMax}`;
+		});
 	}, [params.id, loadCategories, getOneProduct]);
 	console.log(params.id);
 	return (
@@ -82,15 +92,19 @@ function EditObj() {
 											onChange={handleChange}
 											value={values.nombre}
 										/>
-										<textarea
-											rows={6}
-											className="form-control mb-5"
-											id="InputDesc1"
-											name="descripcion"
-											placeholder="Escribe una descripción"
-											onChange={handleChange}
-											value={values.descripcion}
-										/>
+										<div className="mb-5">
+											<textarea
+												rows={6}
+												className="form-control"
+												id="TextAreaDescr"
+												name="descripcion"
+												placeholder="Escribe una descripción"
+												onChange={handleChange}
+												value={values.descripcion}
+												maxLength={200}
+											/>
+											<div id="contador">0/200</div>
+										</div>
 										<select
 											className="form-select"
 											id="selectInput"
