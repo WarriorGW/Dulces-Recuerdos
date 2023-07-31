@@ -3,6 +3,7 @@ import AgregarImg from "../components/AgregarImg";
 import { useParams, useNavigate } from "react-router-dom";
 import { Formik, Form } from "formik";
 import { useProducts } from "../context/ProductsContext";
+import "./css/EditObjStyle.css";
 
 function EditObj() {
 	const navigate = useNavigate();
@@ -49,7 +50,6 @@ function EditObj() {
 			contador.innerHTML = `${longitudAct}/${longitudMax}`;
 		});
 	}, [params.id, loadCategories, getOneProduct]);
-	console.log(params.id);
 	return (
 		<div>
 			<div>
@@ -76,23 +76,48 @@ function EditObj() {
 									}
 									actions.resetForm();
 								}}
+								validate={(valores) => {
+									let errores = {};
+
+									if (!valores.nombre) {
+										errores.nombre = "Ingrese un nombre";
+									} else if (!/^[a-zA-ZÀ-ÿ\s\-]{1,40}$/.test(valores.nombre)) {
+										errores.nombre =
+											"El nombre solo puede contener letras, espacios o guiones";
+									}
+
+									return errores;
+								}}
 							>
-								{({ handleChange, handleSubmit, values, isSubmitting }) => (
+								{({
+									handleChange,
+									handleSubmit,
+									handleBlur,
+									values,
+									errors,
+									isSubmitting,
+								}) => (
 									<Form
 										className="col-lg-12 d-flex flex-column h-100"
 										onSubmit={handleSubmit}
 									>
-										<input
-											type="text"
-											className="form-control mt-3 mb-4"
-											id="InputTitle1"
-											name="nombre"
-											aria-describedby="emailHelp"
-											placeholder="Titulo"
-											onChange={handleChange}
-											value={values.nombre}
-											maxLength={25}
-										/>
+										<div className="mt-3 mb-4">
+											<input
+												type="text"
+												className="form-control"
+												id="InputTitle1"
+												name="nombre"
+												aria-describedby="emailHelp"
+												placeholder="Titulo"
+												onChange={handleChange}
+												value={values.nombre}
+												maxLength={25}
+												onBlur={handleBlur}
+											/>
+											{errors.nombre && (
+												<p className="error">{errors.nombre}</p>
+											)}
+										</div>
 										<div className="mb-5">
 											<textarea
 												rows={6}
