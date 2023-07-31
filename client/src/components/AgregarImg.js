@@ -76,7 +76,7 @@ function AgregarImg() {
 	return (
 		<div className="drag-body">
 			<div className="cont-img-file">
-				<h3 className="justify-center">Sacate la foto uwu</h3>
+				<h3 className="text-center">Subir la foto aquí:</h3>
 				<div className="drag-area">
 					<div className="drag-icon">
 						<i className="fas fa-images"></i>

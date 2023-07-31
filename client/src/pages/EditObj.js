@@ -91,6 +91,7 @@ function EditObj() {
 											placeholder="Titulo"
 											onChange={handleChange}
 											value={values.nombre}
+											maxLength={25}
 										/>
 										<div className="mb-5">
 											<textarea
@@ -138,7 +139,7 @@ function EditObj() {
 													inputMode="numeric"
 													value={values.precio}
 													onChange={handleChange}
-													maxLength={10}
+													maxLength={5}
 												/>
 												<span className="input-group-text">.00</span>
 											</div>
