@@ -11,7 +11,7 @@ function Productos() {
 	}, [loadProducts]);
 
 	return (
-		<div>
+		<div className="container text-center align-content-center">
 			<h1>Productos</h1>
 			<table className="table table-striped">
 				<thead>

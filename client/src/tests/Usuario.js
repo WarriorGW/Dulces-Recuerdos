@@ -9,14 +9,14 @@ function Usuario() {
 	}, [loadUsers]);
 
 	return (
-		<div>
+		<div className="container text-center align-content-center">
 			<h1>Usuarios</h1>
 			<table className="table table-striped">
 				<thead>
 					<tr>
 						<th scope="col">ID</th>
 						<th>Nombre</th>
-						<th>Tellefono</th>
+						<th>Telefono</th>
 						<th>E-mail</th>
 						<th>Contrasena</th>
 					</tr>

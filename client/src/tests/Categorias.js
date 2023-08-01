@@ -9,7 +9,7 @@ function Categorias() {
 	}, [loadCategories]);
 
 	return (
-		<div>
+		<div className="container text-center align-content-center">
 			<h1>Categorias</h1>
 			<table className="table table-striped">
 				<thead>
