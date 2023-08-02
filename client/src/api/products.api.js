@@ -12,12 +12,12 @@ export const createProductsReq = async (product) => {
 	return await axios.post(`${BASE_URL_HOME}/products`, product);
 };
 
-export const updateProductsReq = async (id) => {
-	return await axios.put(`${BASE_URL_HOME}/products/${id}`);
+export const updateProductsReq = async (id, newValue) => {
+	return await axios.put(`${BASE_URL_HOME}/products/${id}`, newValue);
 };
 
-export const getOneProductReq = async (id, newValue) => {
-	return await axios.get(`${BASE_URL_HOME}/products/${id}`, newValue);
+export const getOneProductReq = async (id) => {
+	return await axios.get(`${BASE_URL_HOME}/products/${id}`);
 };
 
 export const getCategoriesReq = async () => {

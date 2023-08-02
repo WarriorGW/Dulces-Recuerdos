@@ -57,14 +57,14 @@ function App() {
 										Inicio
 									</Link>
 								</li>
-								<li className="nav-item mx-2">
+								{/* <li className="nav-item mx-2">
 									<Link className="nav-link" to="/CrearNuevo">
 										Crear Nuevo
 									</Link>
-								</li>
+								</li> */}
 								<li className="nav-item mx-2">
-									<Link className="nav-link" to="/Editando">
-										Editar articulo
+									<Link className="nav-link" to="/Creando">
+										Crear articulo
 									</Link>
 								</li>
 								{/* Aqui esta el link de las pruebas, pongo esto para encontrarlo mas facilmente */}
@@ -149,7 +149,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<ListProduct />} exact></Route>
 					<Route path="/CrearNuevo" element={<CreatePage />} exact></Route>
-					<Route path="/Editando" element={<EditObj />} exact></Route>
+					<Route path="/Creando" element={<EditObj />} exact></Route>
 					<Route path="/Editar/:id" element={<EditObj />} exact></Route>
 					<Route path="/Detalles" element={<Detalles />} exact></Route>
 					<Route path="/Logint" element={<Logint />} exact></Route>

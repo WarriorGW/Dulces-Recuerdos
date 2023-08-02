@@ -76,9 +76,12 @@ function EditObj() {
 										console.log("Actualizado");
 									} else {
 										await createProducts(values);
+										navigate("/Productos");
+										console.log("Creado");
 									}
 									actions.resetForm();
 								}}
+								// Todas las validaciones de datos para que los datos ingresados sean correctos y puedan ser ingresados en la base de datos
 								validate={(valores) => {
 									let errores = {};
 
@@ -95,6 +98,8 @@ function EditObj() {
 
 									if (!valores.precio) {
 										errores.precio = "Ingrese un precio";
+									} else if (!/^[0-9]+$/.test(valores.precio)) {
+										errores.precio = "El precio solo puede contener numeros";
 									}
 
 									return errores;
