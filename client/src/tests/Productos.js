@@ -38,11 +38,13 @@ function Productos() {
 									className="btn btn-outline-primary"
 									onClick={() => navigate(`/Editar/${product.id}`)}
 								>
-									Editar
+									<i class="fas fa-edit" />
 								</button>
 							</td>
 							<td>
-								<button className="btn btn-outline-danger">Borrar</button>
+								<button className="btn btn-outline-danger">
+									<i class="fas fa-trash" />
+								</button>
 							</td>
 						</tr>
 					))}
