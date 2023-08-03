@@ -3,10 +3,10 @@ import {
 	getOneProductReq,
 	getCategoriesReq,
 	getProductsReq,
-	getUsersReq,
 	createProductsReq,
 	updateProductsReq,
 } from "../api/products.api";
+import { getUsersReq, createUserReq } from "../api/users.api";
 import { ProductsContext } from "./AllContexts";
 
 export const useProducts = () => {
@@ -22,6 +22,8 @@ export const ProductsContextProvider = ({ children }) => {
 	const [products, setProducts] = useState([]);
 	const [users, setUsers] = useState([]);
 
+	// Aqui estan todas las funciones relacionadas con los productos
+
 	async function loadProducts() {
 		const response = await getProductsReq();
 		setProducts(response.data);
@@ -33,24 +35,6 @@ export const ProductsContextProvider = ({ children }) => {
 			return response.data;
 		} catch (error) {
 			console.log(error);
-		}
-	};
-
-	const loadCategories = async () => {
-		try {
-			const response = await getCategoriesReq();
-			setCategories(response.data);
-		} catch (error) {
-			console.error("Error al obtener los productos:", error);
-		}
-	};
-
-	const loadUsers = async () => {
-		try {
-			const response = await getUsersReq();
-			setUsers(response.data);
-		} catch (error) {
-			console.error("Error al obtener los productos:", error);
 		}
 	};
 
@@ -72,6 +56,37 @@ export const ProductsContextProvider = ({ children }) => {
 		}
 	};
 
+	// Aqui estan todas las funciones relacionadas con las categorias
+
+	const loadCategories = async () => {
+		try {
+			const response = await getCategoriesReq();
+			setCategories(response.data);
+		} catch (error) {
+			console.error("Error al obtener las categorias:", error);
+		}
+	};
+
+	// Aqui estan todas las funciones relacionadas con los usuarios
+
+	const loadUsers = async () => {
+		try {
+			const response = await getUsersReq();
+			setUsers(response.data);
+		} catch (error) {
+			console.error("Error al obtener los usuarios:", error);
+		}
+	};
+
+	const createUsers = async (newUser) => {
+		try {
+			const response = await createUserReq(newUser);
+			console.log(response);
+		} catch (error) {
+			console.error(error);
+		}
+	};
+
 	return (
 		<ProductsContext.Provider
 			value={{
@@ -80,10 +95,11 @@ export const ProductsContextProvider = ({ children }) => {
 				users,
 				loadProducts,
 				getOneProduct,
-				loadCategories,
-				loadUsers,
 				createProducts,
 				updateProducts,
+				loadCategories,
+				loadUsers,
+				createUsers,
 			}}
 		>
 			{children}

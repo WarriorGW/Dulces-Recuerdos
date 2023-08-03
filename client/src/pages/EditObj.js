@@ -10,10 +10,13 @@ import "./css/EditObjStyle.css";
 
 function EditObj() {
 	const navigate = useNavigate();
-	const { createProducts, updateProducts, categories, loadCategories } =
-		useProducts();
-	const { getOneProduct } = useProducts();
-	// const [numericValue, setNumericValue] = useState("");
+	const {
+		createProducts,
+		updateProducts,
+		categories,
+		loadCategories,
+		getOneProduct,
+	} = useProducts();
 	const params = useParams();
 	const [product, setProduct] = useState({
 		nombre: "",
@@ -21,12 +24,6 @@ function EditObj() {
 		precio: "",
 		Categoria_id_Categoria: "",
 	});
-
-	// const handleInputChange = (event) => {
-	// 	const inputValue = event.target.value;
-	// 	const numericInput = inputValue.replace(/[^0-9]/g, "");
-	// 	setNumericValue(numericInput);
-	// };
 
 	useEffect(() => {
 		const loadProduct = async () => {
@@ -36,7 +33,7 @@ function EditObj() {
 					nombre: product.nombre,
 					descripcion: product.descripcion,
 					precio: product.precio,
-					Categoria_id_Categoria: product.categoria,
+					Categoria_id_Categoria: product.id_Categoria,
 				});
 			}
 		};
@@ -152,14 +149,15 @@ function EditObj() {
 												<p className="error">{errors.descripcion}</p>
 											)}
 										</div>
+										{/* Divisor para saber donde esta el select de las categorias y poder ver mas facil hasta donde tengo que bajar */}
 										<select
 											className="form-select"
 											id="selectInput"
 											name="Categoria_id_Categoria"
 											aria-label="Default select example"
-											defaultValue={values.Categoria_id_Categoria}
 											onChange={handleChange}
 											onBlur={handleBlur}
+											value={values.Categoria_id_Categoria}
 										>
 											<option value="0">Selecciona de que categoría es:</option>
 											{categories.map((category) => (
