@@ -105,6 +105,14 @@ function Logint() {
 															console.log(values);
 															await createUsers(values);
 															actions.resetForm();
+															Swal.fire({
+																icon: "success",
+																title: "Registro exitoso",
+																showConfirmButton: false,
+																timer: 1500,
+																background: "#20232b",
+																color: "#2fb27d",
+															});
 														}}
 													>
 														{({
