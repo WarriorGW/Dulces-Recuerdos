@@ -4,10 +4,15 @@ import { Formik, Form } from "formik";
 import { useProducts } from "../context/ProductsContext";
 
 function Logint() {
-	const { createUsers } = useProducts();
+	const { createUsers, getOneUser, users, logIn, authenticatedUser } =
+		useProducts();
 	const [user, setUser] = useState({
 		nombre: "",
 		telefono: "",
+		email: "",
+		contrasena: "",
+	});
+	const [oneUser, setOneUser] = useState({
 		email: "",
 		contrasena: "",
 	});
@@ -34,34 +39,55 @@ function Logint() {
 										<div className="card-front">
 											<div className="center-wrap">
 												<div className="section text-center">
-													<Formik>
-														<Form>
-															<h4 className="mb-4 pb-3">Log In</h4>
-															<div className="form-group">
-																<input
-																	type="email"
-																	className="form-style"
-																	placeholder="Email"
-																/>
-																<i className="input-icon uil uil-at"></i>
-															</div>
-															<div className="form-group mt-2">
-																<input
-																	type="password"
-																	className="form-style"
-																	placeholder="Contraseña"
-																/>
-																<i className="input-icon uil uil-lock-alt"></i>
-															</div>
-															<button className="btn mt-4 btn-logsign">
-																Log-In
-															</button>
-															<p className="mb-0 mt-4 text-center">
-																<a href="/" className="link">
-																	Olvidaste tu contraseña?
-																</a>
-															</p>
-														</Form>
+													<Formik
+														initialValues={oneUser}
+														onSubmit={async (values, actions) => {
+															//console.log(values);
+															const { email, contrasena } = values;
+															console.log(email, contrasena);
+															console.log(values);
+															logIn(values);
+															console.log(authenticatedUser);
+														}}
+													>
+														{({ handleSubmit, handleChange }) => (
+															<Form onSubmit={handleSubmit}>
+																<h4 className="mb-4 pb-3">Log In</h4>
+																<div className="form-group">
+																	<input
+																		type="email"
+																		id="email"
+																		name="email"
+																		className="form-style"
+																		placeholder="Email"
+																		onChange={handleChange}
+																	/>
+																	<i className="input-icon uil uil-at"></i>
+																</div>
+																<div className="form-group mt-2">
+																	<input
+																		type="password"
+																		id="contrasena"
+																		name="contrasena"
+																		className="form-style"
+																		placeholder="Contraseña"
+																		onChange={handleChange}
+																	/>
+																	<i className="input-icon uil uil-lock-alt"></i>
+																</div>
+																<button
+																	type="submit"
+																	className="btn mt-4 btn-logsign"
+																>
+																	Log-In
+																</button>
+																<p className="mb-0 mt-4 text-center">
+																	<a href="/" className="link">
+																		Olvidaste tu contraseña?
+																	</a>
+																</p>
+															</Form>
+														)}
 													</Formik>
 												</div>
 											</div>
@@ -141,7 +167,7 @@ function Logint() {
 																	name="send"
 																	disabled={isSubmitting}
 																>
-																	Registrase
+																	Registrarse
 																</button>
 															</Form>
 														)}

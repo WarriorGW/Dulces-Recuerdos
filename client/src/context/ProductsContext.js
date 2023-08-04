@@ -5,8 +5,14 @@ import {
 	getProductsReq,
 	createProductsReq,
 	updateProductsReq,
+	deleteProductReq,
 } from "../api/products.api";
-import { getUsersReq, createUserReq } from "../api/users.api";
+import {
+	getUsersReq,
+	createUserReq,
+	getOneUserReq,
+	logInReq,
+} from "../api/users.api";
 import { ProductsContext } from "./AllContexts";
 
 export const useProducts = () => {
@@ -21,6 +27,7 @@ export const ProductsContextProvider = ({ children }) => {
 	const [categories, setCategories] = useState([]);
 	const [products, setProducts] = useState([]);
 	const [users, setUsers] = useState([]);
+	const [authenticatedUser, setAuthenticatedUser] = useState(null);
 
 	// Aqui estan todas las funciones relacionadas con los productos
 
@@ -56,6 +63,15 @@ export const ProductsContextProvider = ({ children }) => {
 		}
 	};
 
+	const deleteProducts = async (id) => {
+		try {
+			const response = await deleteProductReq(id);
+			console.log(response);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	// Aqui estan todas las funciones relacionadas con las categorias
 
 	const loadCategories = async () => {
@@ -78,6 +94,26 @@ export const ProductsContextProvider = ({ children }) => {
 		}
 	};
 
+	const logIn = async (user) => {
+		try {
+			const response = await logInReq(user);
+			setAuthenticatedUser(response.data);
+			console.log(response.data);
+		} catch (error) {
+			console.error("Error al obtener los usuarios:", error);
+		}
+	};
+
+	const getOneUser = async (user) => {
+		try {
+			const response = await getOneUserReq(user);
+			setUsers(response.data);
+			console.log(response.data);
+		} catch (error) {
+			console.error("Error al obtener los usuarios:", error);
+		}
+	};
+
 	const createUsers = async (newUser) => {
 		try {
 			const response = await createUserReq(newUser);
@@ -93,12 +129,16 @@ export const ProductsContextProvider = ({ children }) => {
 				categories,
 				products,
 				users,
+				authenticatedUser,
 				loadProducts,
 				getOneProduct,
 				createProducts,
 				updateProducts,
+				deleteProducts,
 				loadCategories,
 				loadUsers,
+				logIn,
+				getOneUser,
 				createUsers,
 			}}
 		>
