@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./css/LogintStyle.css";
 import { Formik, Form } from "formik";
 import { useProducts } from "../context/ProductsContext";
+import Swal from "sweetalert2";
 
 function Logint() {
-	const { createUsers, getOneUser, users, logIn, authenticatedUser } =
-		useProducts();
+	const { createUsers, logIn } = useProducts();
+	const [userAuthenticated, setUserAuthenticated] = useState(null);
 	const [user, setUser] = useState({
 		nombre: "",
 		telefono: "",
@@ -39,15 +40,16 @@ function Logint() {
 										<div className="card-front">
 											<div className="center-wrap">
 												<div className="section text-center">
+													{/* Este es el formulario de inicio de sesion */}
 													<Formik
 														initialValues={oneUser}
 														onSubmit={async (values, actions) => {
-															//console.log(values);
-															const { email, contrasena } = values;
-															console.log(email, contrasena);
 															console.log(values);
-															logIn(values);
-															console.log(authenticatedUser);
+															const response = await logIn(values);
+															// setUserAuthenticated(response);
+															console.log(response);
+															// console.log(response.user);
+															// console.log(userAuthenticated);
 														}}
 													>
 														{({ handleSubmit, handleChange }) => (
@@ -95,6 +97,7 @@ function Logint() {
 										<div className="card-back">
 											<div className="center-wrap">
 												<div className="section text-center">
+													{/* Este es el formulario para el registro del usuario */}
 													<Formik
 														initialValues={user}
 														enableReinitialize={true}

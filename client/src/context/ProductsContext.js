@@ -97,8 +97,17 @@ export const ProductsContextProvider = ({ children }) => {
 	const logIn = async (user) => {
 		try {
 			const response = await logInReq(user);
-			setAuthenticatedUser(response.data);
-			console.log(response.data);
+			if (response.data.success) {
+				// Inicio de sesión exitoso, hacer algo con los datos del usuario
+				setAuthenticatedUser(response.data.user);
+				console.log(response.data.user);
+				console.log("Si jala");
+			} else {
+				// Inicio de sesión no exitoso, mostrar un mensaje de error
+				console.log(response.data.message);
+				console.log("Jalant");
+			}
+			return response.data;
 		} catch (error) {
 			console.error("Error al obtener los usuarios:", error);
 		}
