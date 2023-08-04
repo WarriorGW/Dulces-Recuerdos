@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./css/DetallesStyle.css";
 
 function Detalles() {
+	const navigate = useNavigate();
 	const productDetails = {
 		id: 1,
 		title: "Nombre del producto",
@@ -31,7 +33,14 @@ function Detalles() {
 						</p>
 						<div className="mt-auto d-flex justify-content-between align-items-center">
 							<h2>Precio: Desde ${productDetails.price}</h2>
-							<button className="btn btn-person">Volver</button>
+							<button
+								className="btn btn-person"
+								onClick={() => {
+									navigate("/");
+								}}
+							>
+								Volver
+							</button>
 						</div>
 					</div>
 				</div>
