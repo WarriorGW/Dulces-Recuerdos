@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
-import "./css/LogintStyle.css";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Formik, Form } from "formik";
 import { useProducts } from "../context/ProductsContext";
 import Swal from "sweetalert2";
+import "./css/LogintStyle.css";
 
 function Logint() {
+	const navigate = useNavigate();
 	const { createUsers, logIn } = useProducts();
 	const [userAuthenticated, setUserAuthenticated] = useState(null);
 	const [user, setUser] = useState({
@@ -48,6 +50,23 @@ function Logint() {
 															const response = await logIn(values);
 															// setUserAuthenticated(response);
 															console.log(response);
+															if (response.success) {
+																Swal.fire({
+																	icon: "success",
+																	title: "Iniciaste sesion correctamente",
+																	showConfirmButton: false,
+																	timer: 1500,
+																}).then(() => {
+																	navigate("/");
+																});
+															} else {
+																Swal.fire({
+																	icon: "error",
+																	title: "Error al iniciar sesion",
+																	text: "Usuario o contraseña incorrecta",
+																	confirmButtonText: "Aceptar",
+																});
+															}
 															// console.log(response.user);
 															// console.log(userAuthenticated);
 														}}
@@ -112,6 +131,7 @@ function Logint() {
 																timer: 1500,
 																background: "#20232b",
 																color: "#2fb27d",
+																// confirmButtonColor: "#1aa16a",
 															});
 														}}
 													>
