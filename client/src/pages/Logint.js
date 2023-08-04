@@ -8,7 +8,6 @@ import "./css/LogintStyle.css";
 function Logint() {
 	const navigate = useNavigate();
 	const { createUsers, logIn } = useProducts();
-	const [userAuthenticated, setUserAuthenticated] = useState(null);
 	const [user, setUser] = useState({
 		nombre: "",
 		telefono: "",
@@ -42,10 +41,11 @@ function Logint() {
 										<div className="card-front">
 											<div className="center-wrap">
 												<div className="section text-center">
-													{/* Este es el formulario de inicio de sesion */}
+													{/* Aqui esta el formulario de inicio de sesion */}
 													<Formik
 														initialValues={oneUser}
 														onSubmit={async (values, actions) => {
+															setOneUser(values);
 															console.log(values);
 															const response = await logIn(values);
 															// setUserAuthenticated(response);
@@ -55,6 +55,8 @@ function Logint() {
 																	icon: "success",
 																	title: "Iniciaste sesion correctamente",
 																	showConfirmButton: false,
+																	background: "#20232b",
+																	color: "#2fb27d",
 																	timer: 1500,
 																}).then(() => {
 																	navigate("/");
@@ -121,6 +123,7 @@ function Logint() {
 														initialValues={user}
 														enableReinitialize={true}
 														onSubmit={async (values, actions) => {
+															setUser(values);
 															console.log(values);
 															await createUsers(values);
 															actions.resetForm();

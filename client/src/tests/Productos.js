@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useProducts } from "../context/ProductsContext";
+import Swal from "sweetalert2";
 import "./css/ProductosStyle.css";
 
 function Productos() {
@@ -48,7 +49,45 @@ function Productos() {
 								<button
 									className="delete-button"
 									onClick={() => {
-										deleteProducts(product.id);
+										Swal.fire({
+											title: "Estas seguro?",
+											text: "Esta accion no puede revertirse",
+											icon: "warning",
+											showCancelButton: true,
+											confirmButtonText: "Eliminar",
+											cancelButtonText: "Cancelar",
+											reverseButtons: true,
+											background: "#20232b",
+											color: "#2fb27d",
+											confirmButtonColor: "#f27474",
+										}).then((result) => {
+											if (result.isConfirmed) {
+												deleteProducts(product.id);
+												Swal.fire({
+													icon: "success",
+													title: "Eliminado",
+													text: "El producto se ha eliminado",
+													confirmButtonText: "Aceptar",
+													background: "#20232b",
+													color: "#2fb27d",
+													confirmButtonColor: "#1aa16a",
+												});
+											} else if (
+												/* Read more about handling dismissals below */
+												result.dismiss === Swal.DismissReason.cancel
+											) {
+												Swal.fire({
+													icon: "error",
+													title: "Cancelado",
+													text: "El producto no se ha eliminado",
+													confirmButtonText: "Aceptar",
+													background: "#20232b",
+													color: "#2fb27d",
+													confirmButtonColor: "#1aa16a",
+												});
+											}
+										});
+
 										loadProducts();
 									}}
 								>
