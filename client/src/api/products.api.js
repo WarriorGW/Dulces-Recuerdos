@@ -24,3 +24,7 @@ export const getOneProductReq = async (id) => {
 export const getCategoriesReq = async () => {
 	return await axios.get(`${BASE_URL_HOME}/categoryRW`);
 };
+
+export const deleteProductReq = async (id) => {
+	return await axios.delete(`${BASE_URL_HOME}/products/${id}`);
+};
