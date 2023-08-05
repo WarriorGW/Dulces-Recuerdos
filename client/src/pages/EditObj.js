@@ -81,24 +81,23 @@ function EditObj() {
 								// Todas las validaciones de datos para que los datos ingresados sean correctos y puedan ser ingresados en la base de datos
 								validate={(valores) => {
 									let errores = {};
-
+									// Validacion del nombre
 									if (!valores.nombre) {
 										errores.nombre = "Ingrese un nombre";
 									} else if (!/^[a-zA-ZÀ-ÿ-_-\s]{1,40}$/.test(valores.nombre)) {
 										errores.nombre =
 											"El nombre solo puede contener letras, espacios o guiones";
 									}
-
+									// Validacion de la descripcion
 									if (!valores.descripcion) {
 										errores.descripcion = "Ingrese una descripción";
 									}
-
+									// Validacion del precio
 									if (!valores.precio) {
 										errores.precio = "Ingrese un precio";
 									} else if (!/^[0-9]+$/.test(valores.precio)) {
 										errores.precio = "El precio solo puede contener numeros";
 									}
-
 									return errores;
 								}}
 							>
