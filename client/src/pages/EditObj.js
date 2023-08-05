@@ -69,7 +69,7 @@ function EditObj() {
 									console.log(values);
 									if (params.id) {
 										await updateProducts(params.id, values);
-										navigate("/");
+										navigate("/Productos");
 										console.log("Actualizado");
 									} else {
 										await createProducts(values);

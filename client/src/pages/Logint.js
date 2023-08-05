@@ -67,6 +67,9 @@ function Logint() {
 																	title: "Error al iniciar sesion",
 																	text: "Usuario o contraseña incorrecta",
 																	confirmButtonText: "Aceptar",
+																	background: "#20232b",
+																	color: "#2fb27d",
+																	confirmButtonColor: "#1aa16a",
 																});
 															}
 															// console.log(response.user);
@@ -105,9 +108,9 @@ function Logint() {
 																	Log-In
 																</button>
 																<p className="mb-0 mt-4 text-center">
-																	<a href="/" className="link">
+																	{/* <a href="/" className="link">
 																		Olvidaste tu contraseña?
-																	</a>
+																	</a> */}
 																</p>
 															</Form>
 														)}
