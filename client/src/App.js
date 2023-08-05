@@ -1,6 +1,5 @@
 import "./App.css";
 //import aos from "aos";
-//import axios from "axios";
 import { Routes, Route, HashRouter, Link } from "react-router-dom";
 import ListProduct from "./pages/ListProduct";
 import CreatePage from "./pages/CreatePage";
@@ -9,7 +8,6 @@ import Detalles from "./pages/Detalles";
 import About from "./pages/About";
 import Logint from "./pages/Logint";
 import Logo from "./assets/dulcesimg-removebg.png";
-// import Tablas from "./tests/Tablas";
 import Productos from "./tests/Productos";
 import Categorias from "./tests/Categorias";
 import Usuario from "./tests/Usuario";
@@ -57,27 +55,13 @@ function App() {
 										Inicio
 									</Link>
 								</li>
-								{/* <li className="nav-item mx-2">
-									<Link className="nav-link" to="/CrearNuevo">
-										Crear Nuevo
-									</Link>
-								</li> */}
 								<li className="nav-item mx-2">
 									<Link className="nav-link" to="/Creando">
-										Crear articulo
+										Crear
 									</Link>
 								</li>
-								{/* Aqui esta el link de las pruebas, pongo esto para encontrarlo mas facilmente */}
-								{/* <li className="nav-item mx-2">
-									<Link className="nav-link" to="/Test1">
-										Pruebas
-									</Link>
-								</li> */}
-								{/* <li className="nav-item mx-2">
-									<Link className="nav-link" to="/Pruebas2">
-										Pruebas 2
-									</Link>
-								</li> */}
+								{/* En este apartado se pondran los links de las pruebas, pongo esto para encontrarlo mas facilmente */}
+								{/* Aqui Finaliza el apartado de los links de las pruebas */}
 								<li className="nav-item dropdown mx-2">
 									<Link
 										className="nav-link dropdown-toggle"
@@ -90,11 +74,6 @@ function App() {
 									</Link>
 									<ul className="dropdown-menu">
 										<li>
-											<Link className="dropdown-item" to="/">
-												Home
-											</Link>
-										</li>
-										<li>
 											<Link className="dropdown-item" to="/Logint">
 												Login
 											</Link>
@@ -104,7 +83,7 @@ function App() {
 										</li>
 										<li>
 											<Link className="dropdown-item" to="/About">
-												About me
+												Mis redes
 											</Link>
 										</li>
 										<li>
@@ -131,15 +110,23 @@ function App() {
 								<a className="nav-link disabled">Disabled</a>
 							</li> */}
 							</ul>
+							<ul className="navbar-nav me-5 mb-2 mb-lg-0">
+								<li className="nav-item mx-2">
+									<Link className="nav-link" to="/Logint">
+										<i className="uil uil-user"></i>
+										Login
+									</Link>
+								</li>
+							</ul>
 							<form className="d-flex" role="search">
 								<input
 									className="form-control me-2"
 									type="search"
-									placeholder="Search"
+									placeholder="Busqueda"
 									aria-label="Search"
 								/>
 								<button className="btn btn-outline-success" type="submit">
-									Search
+									Buscar
 								</button>
 							</form>
 						</div>

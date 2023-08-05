@@ -1,0 +1,11 @@
+.card .btn-purple {
+	background-color: #85008f;
+	border-color: #85008f;
+	color: #fff;
+}
+
+.card .btn-purple:hover {
+	background-color: rgb(120, 0, 129);
+	border-color: rgb(120, 0, 129);
+	color: #fff;
+}
