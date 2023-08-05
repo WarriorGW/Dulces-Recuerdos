@@ -8,14 +8,9 @@
 }
 
 .card-body {
-	padding-bottom: 1vh; /* Ajusta el valor según tus necesidades */
+	padding-bottom: 1vh;
 	height: auto !important;
 	/* background-color: #e15e60; */
-}
-
-.card:hover {
-	transform: scale(1.05) !important;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-link {
