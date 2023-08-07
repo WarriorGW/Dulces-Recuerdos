@@ -80,7 +80,7 @@ function EditObj() {
 						formData.append("imagenSubida", imagenS);
 						console.log("Este es", formData);
 						await createProducts(formData);
-						//navigate("/Productos");
+						navigate("/Productos");
 						console.log("Creado");
 					}
 					actions.resetForm();
@@ -128,7 +128,6 @@ function EditObj() {
 											changeImg={(e) => {
 												//! Codigo de la imagen
 												setImagenS(e.target.files[0]);
-												//setFieldValue("dataImg", formData);
 												//! Fin del codigo de la imagen
 											}}
 										/>
