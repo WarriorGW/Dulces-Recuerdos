@@ -24,6 +24,7 @@ function Productos() {
 							<th>Descripción</th>
 							<th>Precio</th>
 							<th>Categoría</th>
+							<th>Nombre Imagen</th>
 							<th className="min-th">Editar</th>
 							<th className="min-th">Eliminar</th>
 						</tr>
@@ -36,6 +37,7 @@ function Productos() {
 								<td>{product.descripcion}</td>
 								<td>{product.precio}</td>
 								<td>{product.categoria}</td>
+								<td>{product.nombreImg}</td>
 								<td>
 									<button
 										className="edit-button"

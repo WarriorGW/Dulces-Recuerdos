@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./AgregarImgStyle.css";
 
-function AgregarImg() {
+function AgregarImg(props) {
 	useEffect(() => {
 		const dragArea = document.querySelector(".drag-area");
 		const dragText = document.querySelector(".drag-header");
@@ -86,7 +86,7 @@ function AgregarImg() {
 						{" "}
 						or <span className="drag-button">browse</span>
 					</span>
-					<input type="file" hidden />
+					<input type="file" name="imagen" onChange={props.changeImg} hidden />
 					<span className="drag-supports">Supports: JPEG, JPG, PNG</span>
 				</div>
 			</div>
