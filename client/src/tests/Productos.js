@@ -40,7 +40,9 @@ function Productos() {
 								<td>{product.categoria}</td>
 								<td>{product.nombreImg}</td>
 								<td>
-									<img className="img-fitness" src={product.urlImg}></img>
+									<a href={product.urlImg} target="_blank">
+										<img className="img-fitness" src={product.urlImg}></img>
+									</a>
 								</td>
 								<td>
 									<button
