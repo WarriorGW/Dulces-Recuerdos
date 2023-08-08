@@ -1,29 +1,18 @@
 {
   "files": {
     "main.css": "/Dulces-Recuerdos/static/css/main.fc8d5156.css",
-    "main.js": "/Dulces-Recuerdos/static/js/main.b862467e.js",
+    "main.js": "/Dulces-Recuerdos/static/js/main.19f33a98.js",
     "static/js/787.c4e7f8f9.chunk.js": "/Dulces-Recuerdos/static/js/787.c4e7f8f9.chunk.js",
-    "static/media/Passport-5.jpeg": "/Dulces-Recuerdos/static/media/Passport-5.07034605a13ef1f8fbab.jpeg",
-    "static/media/Passport-11.jpeg": "/Dulces-Recuerdos/static/media/Passport-11.a971d426467ee79b4520.jpeg",
-    "static/media/Passport-12.jpeg": "/Dulces-Recuerdos/static/media/Passport-12.c8d22bf8d7044506c8c7.jpeg",
-    "static/media/Passport-2.jpeg": "/Dulces-Recuerdos/static/media/Passport-2.c8d22bf8d7044506c8c7.jpeg",
-    "static/media/Passport-3.jpeg": "/Dulces-Recuerdos/static/media/Passport-3.0edd081d77eef31e3df6.jpeg",
     "static/media/subtle-prism.png": "/Dulces-Recuerdos/static/media/subtle-prism.feb1ecc1fc24e1e516c7.png",
-    "static/media/Passport-4.jpeg": "/Dulces-Recuerdos/static/media/Passport-4.e5890c5cf887afb95472.jpeg",
     "static/media/Passport-1.jpeg": "/Dulces-Recuerdos/static/media/Passport-1.d17d25b580fdba111255.jpeg",
     "static/media/dulcesimg-removebg.png": "/Dulces-Recuerdos/static/media/dulcesimg-removebg.92329b6cc4add3dcfd5f.png",
-    "static/media/Passport-8.jpeg": "/Dulces-Recuerdos/static/media/Passport-8.be7d197ea0e49a601a8f.jpeg",
-    "static/media/Passport-7.jpeg": "/Dulces-Recuerdos/static/media/Passport-7.c0d6002627f67275be09.jpeg",
-    "static/media/Passport-10.jpeg": "/Dulces-Recuerdos/static/media/Passport-10.080198e257587289a8d1.jpeg",
-    "static/media/Passport-9.jpeg": "/Dulces-Recuerdos/static/media/Passport-9.3691bfae038114df40b6.jpeg",
-    "static/media/Passport-6.jpeg": "/Dulces-Recuerdos/static/media/Passport-6.60a38d7bcfdd958028de.jpeg",
     "index.html": "/Dulces-Recuerdos/index.html",
     "main.fc8d5156.css.map": "/Dulces-Recuerdos/static/css/main.fc8d5156.css.map",
-    "main.b862467e.js.map": "/Dulces-Recuerdos/static/js/main.b862467e.js.map",
+    "main.19f33a98.js.map": "/Dulces-Recuerdos/static/js/main.19f33a98.js.map",
     "787.c4e7f8f9.chunk.js.map": "/Dulces-Recuerdos/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc8d5156.css",
-    "static/js/main.b862467e.js"
+    "static/js/main.19f33a98.js"
   ]
 }
