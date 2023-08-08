@@ -25,6 +25,7 @@ function Productos() {
 							<th>Precio</th>
 							<th>Categoría</th>
 							<th>Nombre Imagen</th>
+							<th>Imagen</th>
 							<th className="min-th">Editar</th>
 							<th className="min-th">Eliminar</th>
 						</tr>
@@ -38,6 +39,9 @@ function Productos() {
 								<td>{product.precio}</td>
 								<td>{product.categoria}</td>
 								<td>{product.nombreImg}</td>
+								<td>
+									<img className="img-fitness" src={product.urlImg}></img>
+								</td>
 								<td>
 									<button
 										className="edit-button"

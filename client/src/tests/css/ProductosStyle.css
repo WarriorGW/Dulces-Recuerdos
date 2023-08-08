@@ -123,3 +123,11 @@
 .min-th {
 	min-width: 100px;
 }
+
+/* Estilos para la imagen y que sea fitness */
+
+.img-fitness {
+	max-width: 50px;
+	min-width: 50px;
+	height: auto;
+}

@@ -10,10 +10,6 @@ export const getProductsReq = async () => {
 	return await axios.get(`${BASE_URL_HOME}/products`);
 };
 
-// export const createProductsReq = async (product) => {
-// 	return await axios.post(`${BASE_URL_LOCAL}/products`, product);
-// };
-
 export const createProductsReq = async (product) => {
 	return await axios.post(`${BASE_URL_HOME}/uploadImg`, product);
 };
