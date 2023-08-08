@@ -26,7 +26,6 @@ export const useProducts = () => {
 export const ProductsContextProvider = ({ children }) => {
 	const [categories, setCategories] = useState([]);
 	const [products, setProducts] = useState([]);
-	const [oneProduct, setOneProduct] = useState([]);
 	const [users, setUsers] = useState([]);
 	const [authenticatedUser, setAuthenticatedUser] = useState(null);
 
@@ -40,7 +39,6 @@ export const ProductsContextProvider = ({ children }) => {
 	const getOneProduct = async (id) => {
 		try {
 			const response = await getOneProductReq(id);
-			setOneProduct(response.data);
 			return response.data;
 		} catch (error) {
 			console.log(error);
@@ -139,7 +137,6 @@ export const ProductsContextProvider = ({ children }) => {
 			value={{
 				categories,
 				products,
-				oneProduct,
 				users,
 				authenticatedUser,
 				loadProducts,

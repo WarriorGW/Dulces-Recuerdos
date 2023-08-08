@@ -1,17 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./css/DetallesStyle.css";
 import { useProducts } from "../context/ProductsContext";
 import { useParams } from "react-router-dom";
 
 function Detalles() {
-	const { getOneProduct, oneProduct } = useProducts();
+	const { getOneProduct } = useProducts();
+	const [oneProduct, setOneProduct] = useState([]);
 	const params = useParams();
 
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		getOneProduct(params.id);
+		const loadOneProduct = async () => {
+			if (params.id) {
+				const oneProduct = await getOneProduct(params.id);
+				setOneProduct(oneProduct);
+			}
+		};
+		loadOneProduct();
 	}, [getOneProduct]);
 
 	return (
@@ -39,7 +46,6 @@ function Detalles() {
 								className="btn btn-person"
 								onClick={() => {
 									navigate("/");
-									window.location.reload();
 								}}
 							>
 								Volver
