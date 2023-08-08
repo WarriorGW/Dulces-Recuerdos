@@ -10,7 +10,7 @@ function ProductIndv(props) {
 		AOS.init();
 	}, []);
 
-	if (!props.imageNum || !props.titulo || !props.descr || !props.precio) {
+	if (!props.imgUrl || !props.titulo || !props.descr || !props.precio) {
 		return (
 			<div className="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex justify-content-center mb-5">
 				<div
@@ -42,10 +42,10 @@ function ProductIndv(props) {
 			<Link
 				className="card card-link"
 				style={{ width: "18rem" }}
-				to={"/Detalles"}
+				to={`/Detalles/${props.idLink}`}
 			>
 				<img
-					src={require(`../img/Passport-${props.imageNum}.jpeg`)}
+					src={props.imgUrl}
 					className="card-img-top img-fluid mx-height"
 					alt="..."
 					style={{ objectFit: "cover", height: "100%" }}
@@ -59,7 +59,7 @@ function ProductIndv(props) {
 					</p>
 					{/* <p className="" style={{ marginBottom: "0px" }}></p> */}
 				</div>
-				<div className="card-footer">Desde: {props.precio}</div>
+				<div className="card-footer">Desde: ${props.precio}</div>
 			</Link>
 		</div>
 	);

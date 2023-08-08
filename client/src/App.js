@@ -138,7 +138,7 @@ function App() {
 					<Route path="/CrearNuevo" element={<CreatePage />} exact></Route>
 					<Route path="/Creando" element={<EditObj />} exact></Route>
 					<Route path="/Editar/:id" element={<EditObj />} exact></Route>
-					<Route path="/Detalles" element={<Detalles />} exact></Route>
+					<Route path="/Detalles/:id" element={<Detalles />} exact></Route>
 					<Route path="/Logint" element={<Logint />} exact></Route>
 					<Route path="/About" element={<About />} exact></Route>
 					<Route path="/Productos" element={<Productos />} exact></Route>
