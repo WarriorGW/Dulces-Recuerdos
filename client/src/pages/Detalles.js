@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./css/DetallesStyle.css";
+import { useProducts } from "../context/ProductsContext";
+import { useParams } from "react-router-dom";
 
 function Detalles() {
+	const { getOneProduct, oneProduct } = useProducts();
+	const params = useParams();
+
 	const navigate = useNavigate();
-	const productDetails = {
-		id: 1,
-		title: "Nombre del producto",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis tellus erat. Quisque maximus hendrerit lobortis. Proin risus magna, dapibus quis mi a, faucibus euismod quam. Pellentesque mauris arcu, cursus in euismod non, faucibus et neque. Phasellus a dolor at lectus lacinia semper. Donec risus tellus, eleifend sit amet metus vitae, tempus mollis diam. Sed quis ante ipsum. In tempor dapibus urna, et bibendum magna. Mauris a arcu lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec arcu justo, ultrices eget libero sed, bibendum sollicitudin enim. Nulla vel erat tempor, sollicitudin tellus et, bibendum ipsum.",
-		price: 99.99,
-		image: require("../img/Passport-1.jpeg"),
-	};
+
+	useEffect(() => {
+		getOneProduct(params.id);
+	}, [getOneProduct]);
+
 	return (
 		<div>
 			<div className="container mt-5 pt-1">
@@ -19,7 +21,7 @@ function Detalles() {
 					<div className="col-lg-6">
 						<div className="square-image-container d-flex justify-content-center align-items-center">
 							<img
-								src={productDetails.image}
+								src={oneProduct.urlImg}
 								className="img-fluid square-image"
 								alt="Producto"
 								style={{ maxHeight: "100%", maxWidth: "100%" }}
@@ -27,16 +29,17 @@ function Detalles() {
 						</div>
 					</div>
 					<div className="col-lg-6 d-flex flex-column">
-						<h1 className="text-center mt-3 mb-4">{productDetails.title}</h1>
+						<h1 className="text-center mt-3 mb-4">{oneProduct.nombre}</h1>
 						<p className="text-center mb-5 description-text">
-							{productDetails.description}
+							{oneProduct.descripcion}
 						</p>
 						<div className="mt-auto d-flex justify-content-between align-items-center">
-							<h2>Precio: Desde ${productDetails.price}</h2>
+							<h2>Precio: Desde ${oneProduct.precio}</h2>
 							<button
 								className="btn btn-person"
 								onClick={() => {
 									navigate("/");
+									window.location.reload();
 								}}
 							>
 								Volver
