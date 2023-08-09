@@ -37,7 +37,7 @@ function ProductIndv(props) {
 	}
 
 	return (
-		<div className="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex justify-content-center mb-5 card-container-c">
+		<div className="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 d-flex justify-content-center mb-responsive card-container-c">
 			<Link
 				className="card card-link"
 				style={{ width: "18rem" }}

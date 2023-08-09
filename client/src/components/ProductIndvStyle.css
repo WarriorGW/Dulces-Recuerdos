@@ -1,6 +1,6 @@
 .card-container-c .card {
-	max-height: 25rem;
-	min-height: 25rem;
+	max-height: 23rem;
+	min-height: 23rem;
 	transition: transform 75ms ease-in-out;
 }
 
@@ -38,4 +38,26 @@
 
 .mx-height {
 	max-height: 50%;
+}
+
+.mb-responsive {
+	margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+	.card-container-c .card p {
+		font-size: 13px;
+	}
+	.card-container-c .card h5 {
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width: 576px) {
+	.card-container-c .card p {
+		font-size: 12px;
+	}
+	.card-container-c .card h5 {
+		font-size: 1rem;
+	}
 }
