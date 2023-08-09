@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Dulces-Recuerdos/static/css/main.fc8d5156.css",
-    "main.js": "/Dulces-Recuerdos/static/js/main.f3a17168.js",
+    "main.js": "/Dulces-Recuerdos/static/js/main.2f7c17c6.js",
     "static/js/787.c4e7f8f9.chunk.js": "/Dulces-Recuerdos/static/js/787.c4e7f8f9.chunk.js",
     "static/media/subtle-prism.png": "/Dulces-Recuerdos/static/media/subtle-prism.feb1ecc1fc24e1e516c7.png",
     "static/media/dulcesimg-removebg.png": "/Dulces-Recuerdos/static/media/dulcesimg-removebg.92329b6cc4add3dcfd5f.png",
     "index.html": "/Dulces-Recuerdos/index.html",
     "main.fc8d5156.css.map": "/Dulces-Recuerdos/static/css/main.fc8d5156.css.map",
-    "main.f3a17168.js.map": "/Dulces-Recuerdos/static/js/main.f3a17168.js.map",
+    "main.2f7c17c6.js.map": "/Dulces-Recuerdos/static/js/main.2f7c17c6.js.map",
     "787.c4e7f8f9.chunk.js.map": "/Dulces-Recuerdos/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc8d5156.css",
-    "static/js/main.f3a17168.js"
+    "static/js/main.2f7c17c6.js"
   ]
 }

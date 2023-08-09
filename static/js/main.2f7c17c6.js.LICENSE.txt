@@ -85,5 +85,3 @@
 //! Codigo de la imagen
 
 //! Fin del codigo de la imagen
-
-//! Hasta aqui llega lo de las imagenes
