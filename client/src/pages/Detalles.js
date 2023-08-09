@@ -24,8 +24,8 @@ function Detalles() {
 	return (
 		<div>
 			<div className="container mt-5 pt-1">
-				<div className="row">
-					<div className="col-lg-6">
+				<div className="row bg-w-translusent">
+					<div className="col-lg-6 d-flex align-items-center">
 						<div className="square-image-container d-flex justify-content-center align-items-center">
 							<img
 								src={oneProduct.urlImg}
@@ -37,7 +37,7 @@ function Detalles() {
 					</div>
 					<div className="col-lg-6 d-flex flex-column">
 						<h1 className="text-center mt-3 mb-4">{oneProduct.nombre}</h1>
-						<p className="text-center mb-5 description-text">
+						<p className="text-center my-4 description-text">
 							{oneProduct.descripcion}
 						</p>
 						<div className="mt-auto d-flex justify-content-between align-items-center">
