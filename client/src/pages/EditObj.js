@@ -26,9 +26,8 @@ function EditObj() {
 		Categoria_id_Categoria: "",
 	});
 
-	//! A partir de aqui va lo de las imagenes
 	const [imagenS, setImagenS] = useState("");
-	//! Hasta aqui llega lo de las imagenes
+
 	useEffect(() => {
 		const loadProduct = async () => {
 			if (params.id) {
@@ -163,10 +162,10 @@ function EditObj() {
 												placeholder="Escribe una descripción"
 												onChange={handleChange}
 												value={values.descripcion}
-												maxLength={200}
+												maxLength={500}
 												onBlur={handleBlur}
 											/>
-											<div id="contador">0/200</div>
+											<div id="contador">0/500</div>
 											{touched.descripcion && errors.descripcion && (
 												<p className="error">{errors.descripcion}</p>
 											)}

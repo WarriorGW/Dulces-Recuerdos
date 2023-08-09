@@ -19,7 +19,7 @@ function Detalles() {
 			}
 		};
 		loadOneProduct();
-	}, [getOneProduct]);
+	}, [params, getOneProduct]);
 
 	return (
 		<div>

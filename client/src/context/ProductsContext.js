@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import {
 	getOneProductReq,
 	getCategoriesReq,
@@ -31,14 +31,16 @@ export const ProductsContextProvider = ({ children }) => {
 
 	// Aqui estan todas las funciones relacionadas con los productos
 
-	async function loadProducts() {
+	const loadProducts = useCallback(async () => {
 		const response = await getProductsReq();
+		console.log("Productos cargados");
 		setProducts(response.data);
-	}
+	}, []);
 
 	const getOneProduct = async (id) => {
 		try {
 			const response = await getOneProductReq(id);
+			console.log("Uno solo cargado");
 			return response.data;
 		} catch (error) {
 			console.log(error);
@@ -48,6 +50,7 @@ export const ProductsContextProvider = ({ children }) => {
 	const createProducts = async (product) => {
 		try {
 			const response = await createProductsReq(product);
+			console.log("Producto creado");
 			console.log(response);
 		} catch (error) {
 			console.error(error);
@@ -57,6 +60,7 @@ export const ProductsContextProvider = ({ children }) => {
 	const updateProducts = async (id, newVal) => {
 		try {
 			const response = await updateProductsReq(id, newVal);
+			console.log("Producto actualizado");
 			console.log(response);
 		} catch (error) {
 			console.log(error);
@@ -66,6 +70,7 @@ export const ProductsContextProvider = ({ children }) => {
 	const deleteProducts = async (id) => {
 		try {
 			const response = await deleteProductReq(id);
+			console.log("Producto eliminado");
 			console.log(response);
 		} catch (error) {
 			console.log(error);
@@ -74,25 +79,27 @@ export const ProductsContextProvider = ({ children }) => {
 
 	// Aqui estan todas las funciones relacionadas con las categorias
 
-	const loadCategories = async () => {
+	const loadCategories = useCallback(async () => {
 		try {
 			const response = await getCategoriesReq();
 			setCategories(response.data);
+			console.log("Categorias cargadas");
 		} catch (error) {
 			console.error("Error al obtener las categorias:", error);
 		}
-	};
+	}, []);
 
 	// Aqui estan todas las funciones relacionadas con los usuarios
 
-	const loadUsers = async () => {
+	const loadUsers = useCallback(async () => {
 		try {
 			const response = await getUsersReq();
 			setUsers(response.data);
+			console.log("Usuarios cargados");
 		} catch (error) {
 			console.error("Error al obtener los usuarios:", error);
 		}
-	};
+	}, []);
 
 	const logIn = async (user) => {
 		try {
@@ -101,11 +108,11 @@ export const ProductsContextProvider = ({ children }) => {
 				// Inicio de sesión exitoso, hacer algo con los datos del usuario
 				setAuthenticatedUser(response.data.user);
 				console.log(response.data.user);
-				console.log("Si jala");
+				console.log("iniciaste sesion");
 			} else {
 				// Inicio de sesión no exitoso, mostrar un mensaje de error
 				console.log(response.data.message);
-				console.log("Jalant");
+				console.log("No pudiste iniciar sesion");
 			}
 			return response.data;
 		} catch (error) {
@@ -117,6 +124,7 @@ export const ProductsContextProvider = ({ children }) => {
 		try {
 			const response = await getOneUserReq(user);
 			setUsers(response.data);
+			console.log("Un solo user obtenido");
 			console.log(response.data);
 		} catch (error) {
 			console.error("Error al obtener los usuarios:", error);
@@ -127,6 +135,7 @@ export const ProductsContextProvider = ({ children }) => {
 		try {
 			const response = await createUserReq(newUser);
 			console.log(response);
+			console.log("Usuario creado");
 		} catch (error) {
 			console.error(error);
 		}

@@ -6,7 +6,8 @@ function AgregarImg(props) {
 		const dragArea = document.querySelector(".drag-area");
 		const dragText = document.querySelector(".drag-header");
 
-		let button = document.querySelector(".drag-button");
+		// let button = document.querySelector(".drag-button");
+		let button = document.querySelector(".drag-sim-but");
 		let inputF = document.querySelector('input[type="file"]');
 		let file;
 
@@ -77,7 +78,7 @@ function AgregarImg(props) {
 		<div className="drag-body">
 			<div className="cont-img-file">
 				<h3 className="text-center">Subir la foto aquí:</h3>
-				<div className="drag-area">
+				<div className="drag-area drag-sim-but">
 					<div className="drag-icon">
 						<i className="fas fa-images"></i>
 					</div>
