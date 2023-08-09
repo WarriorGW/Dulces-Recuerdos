@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Swal from "sweetalert2";
 import "./AgregarImgStyle.css";
 
 function AgregarImg(props) {
@@ -63,15 +64,20 @@ function AgregarImg(props) {
 				};
 				fileReader.readAsDataURL(file);
 			} else {
-				alert("Invalid file");
+				Swal.fire({
+					icon: "error",
+					title: "Error",
+					text: "Ese archivo no puede ser subido",
+					confirmButtonText: "Aceptar",
+					background: "#20232b",
+					color: "#2fb27d",
+					confirmButtonColor: "#1aa16a",
+				});
 				dragArea.classList.remove("active");
 			}
 		}
 
-		return () => {
-			// Clean up the event listener when the component unmounts
-			dragArea.removeEventListener("dragover", handleDragOver);
-		};
+		return () => {};
 	}, []);
 
 	return (
@@ -82,13 +88,11 @@ function AgregarImg(props) {
 					<div className="drag-icon">
 						<i className="fas fa-images"></i>
 					</div>
-					<span className="drag-header">Drag & Drop</span>
 					<span className="drag-header">
-						{" "}
-						or <span className="drag-button">browse</span>
+						<span className="drag-button">Buscar imagen</span>
 					</span>
 					<input type="file" name="imagen" onChange={props.changeImg} hidden />
-					<span className="drag-supports">Supports: JPEG, JPG, PNG</span>
+					<span className="drag-supports">Acepta: JPEG, JPG, PNG</span>
 				</div>
 			</div>
 		</div>

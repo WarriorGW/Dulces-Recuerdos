@@ -1,7 +1,9 @@
 .card-container-c .card {
 	max-height: 25rem;
+	min-height: 25rem;
 	transition: transform 75ms ease-in-out;
 }
+
 .card-container-c .card:hover {
 	transform: scale(1.05);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

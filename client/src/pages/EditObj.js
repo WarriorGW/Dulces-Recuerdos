@@ -27,6 +27,7 @@ function EditObj() {
 	});
 
 	const [imagenS, setImagenS] = useState("");
+	//todo const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
 		const loadProduct = async () => {
@@ -172,7 +173,7 @@ function EditObj() {
 										</div>
 										{/* Divisor para saber donde esta el select de las categorias */}
 										<select
-											className="form-select"
+											className="form-select mb-4"
 											id="selectInput"
 											name="Categoria_id_Categoria"
 											aria-label="Default select example"

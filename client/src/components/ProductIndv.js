@@ -29,7 +29,6 @@ function ProductIndv(props) {
 							Some quick example text to build on the card title and make up the
 							bulk of the card's content.
 						</p>
-						{/* <p className="card-footer" style={{ marginBottom: "0px" }}></p> */}
 					</div>
 					<div className="card-footer">Desde: $0000.00</div>
 				</div>
@@ -53,11 +52,7 @@ function ProductIndv(props) {
 				/>
 				<div className="card-body " style={{ paddingBottom: "1vh" }}>
 					<h5 className="card-title inner-tit">{props.titulo}</h5>
-					<p className="card-text inner-descr">
-						{/* {props.descr} */}
-						{props.descr}
-					</p>
-					{/* <p className="" style={{ marginBottom: "0px" }}></p> */}
+					<p className="card-text inner-descr">{props.descr}</p>
 				</div>
 				<div className="card-footer">Desde: ${props.precio}</div>
 			</Link>
