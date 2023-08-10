@@ -29,6 +29,11 @@ const GaleriaC = [
 		img: "water",
 		title: "Cilindros",
 	},
+	{
+		id: 7,
+		img: "notebook",
+		title: "Cuadernos",
+	},
 ];
 
 export default GaleriaC;

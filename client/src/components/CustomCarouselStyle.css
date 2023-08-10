@@ -4,7 +4,11 @@
 }
 
 .slider:first-child {
-	margin-left: 2vh;
+	margin-left: 0.75rem;
+}
+
+.slider:last-child {
+	margin-right: 1rem;
 }
 
 .slider-container {
@@ -26,6 +30,7 @@
 	background-color: pink;
 	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 	transition: transform 0.1s ease-in-out;
+	min-height: 3.7rem;
 }
 
 .slider-content:hover {
