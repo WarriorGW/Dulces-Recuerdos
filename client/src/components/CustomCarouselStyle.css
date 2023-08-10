@@ -1,5 +1,4 @@
 .col-12 .swiper {
-	height: 7rem;
 	padding-top: 1vh;
 	padding-right: 3vh;
 }
@@ -10,6 +9,11 @@
 
 .slider-container {
 	margin-bottom: 2vh;
+}
+
+.slider-img {
+	width: 64px;
+	height: 64px;
 }
 
 .slider-content {
@@ -40,16 +44,31 @@
 	.slider-title {
 		font-size: 1.1rem;
 	}
+
+	.slider-img {
+		height: 20px;
+		width: 20px;
+	}
 }
 
 @media (min-width: 350px) {
 	.slider-title {
 		font-size: 1.2rem;
 	}
+
+	.slider-img {
+		height: 32px;
+		width: 32px;
+	}
 }
 
 @media (min-width: 1200px) {
 	.slider-title {
 		font-size: 1.5rem;
+	}
+
+	.slider-img {
+		height: 50px;
+		width: 50px;
 	}
 }

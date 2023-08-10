@@ -7,17 +7,26 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import "swiper/css/autoplay";
+import {
+	Navigation,
+	Pagination,
+	Scrollbar,
+	A11y,
+	Autoplay,
+	Grid,
+} from "swiper/modules";
 
 function CustomCarousel() {
 	return (
 		<div className="d-flex align-items-center justify-content-center slider-container">
 			<div className="col-12">
 				<Swiper
-					modules={[Navigation, Pagination, Scrollbar, A11y]}
+					modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, Grid]}
 					spaceBetween={20}
 					slidesPerView={4}
 					grabCursor={true}
+					autoplay
 					breakpoints={{
 						0: {
 							slidesPerView: 1,
@@ -37,7 +46,7 @@ function CustomCarousel() {
 					// onSwiper={(swiper) => console.log(swiper)}
 				>
 					{GaleriaC.map((catalogue) => (
-						<SwiperSlide key={catalogue.id} className="slider mt-2">
+						<SwiperSlide key={catalogue.id} className="slider mt-2 mb-3">
 							<div className="slider-content">
 								<img
 									src={require(`../assets/carousel-${catalogue.img}.png`)}
