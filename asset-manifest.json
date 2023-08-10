@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Dulces-Recuerdos/static/css/main.314caf29.css",
-    "main.js": "/Dulces-Recuerdos/static/js/main.a2cf7f2b.js",
+    "main.css": "/Dulces-Recuerdos/static/css/main.6dff3380.css",
+    "main.js": "/Dulces-Recuerdos/static/js/main.8606ecb0.js",
     "static/js/787.c4e7f8f9.chunk.js": "/Dulces-Recuerdos/static/js/787.c4e7f8f9.chunk.js",
     "static/media/subtle-prism.png": "/Dulces-Recuerdos/static/media/subtle-prism.feb1ecc1fc24e1e516c7.png",
     "static/media/dulcesimg-removebg.png": "/Dulces-Recuerdos/static/media/dulcesimg-removebg.92329b6cc4add3dcfd5f.png",
     "index.html": "/Dulces-Recuerdos/index.html",
-    "main.314caf29.css.map": "/Dulces-Recuerdos/static/css/main.314caf29.css.map",
-    "main.a2cf7f2b.js.map": "/Dulces-Recuerdos/static/js/main.a2cf7f2b.js.map",
+    "main.6dff3380.css.map": "/Dulces-Recuerdos/static/css/main.6dff3380.css.map",
+    "main.8606ecb0.js.map": "/Dulces-Recuerdos/static/js/main.8606ecb0.js.map",
     "787.c4e7f8f9.chunk.js.map": "/Dulces-Recuerdos/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.314caf29.css",
-    "static/js/main.a2cf7f2b.js"
+    "static/css/main.6dff3380.css",
+    "static/js/main.8606ecb0.js"
   ]
 }
