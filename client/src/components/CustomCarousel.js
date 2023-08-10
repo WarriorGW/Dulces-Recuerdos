@@ -17,6 +17,7 @@ function CustomCarousel() {
 					modules={[Navigation, Pagination, Scrollbar, A11y]}
 					spaceBetween={20}
 					slidesPerView={4}
+					grabCursor={true}
 					breakpoints={{
 						0: {
 							slidesPerView: 1,
@@ -31,7 +32,6 @@ function CustomCarousel() {
 							slidesPerView: 4,
 						},
 					}}
-					// navigation
 					scrollbar={{ draggable: true }}
 					// onSlideChange={() => console.log("slide change")}
 					// onSwiper={(swiper) => console.log(swiper)}
