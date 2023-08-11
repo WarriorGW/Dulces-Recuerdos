@@ -53,7 +53,9 @@ function CustomCarousel() {
 									alt="Imagen"
 									className="slider-img"
 								/>
-								<h5 className="slider-title my-auto">{catalogue.title}</h5>
+								<h5 className="slider-title mx-auto my-auto">
+									{catalogue.title}
+								</h5>
 							</div>
 						</SwiperSlide>
 					))}
