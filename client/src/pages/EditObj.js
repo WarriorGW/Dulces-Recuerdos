@@ -3,6 +3,7 @@ import AgregarImg from "../components/AgregarImg";
 import { useParams, useNavigate } from "react-router-dom";
 import { Formik, Form } from "formik";
 import { useProducts } from "../context/ProductsContext";
+import Swal from "sweetalert2";
 import "./css/EditObjStyle.css";
 
 // Para permitir casi todo en un gmail /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
@@ -27,7 +28,17 @@ function EditObj() {
 	});
 
 	const [imagenS, setImagenS] = useState("");
-	//todo const [isLoading, setIsLoading] = useState(false);
+
+	const isLoading = () => {
+		Swal.fire({
+			title: "Procesando...",
+			background: "#20232b",
+			color: "#2fb27d",
+			didOpen: () => {
+				Swal.showLoading();
+			},
+		});
+	};
 
 	useEffect(() => {
 		const loadProduct = async () => {
@@ -61,6 +72,7 @@ function EditObj() {
 				enableReinitialize={true}
 				//? On submit functions
 				onSubmit={async (values, actions) => {
+					isLoading();
 					console.log(values);
 					if (params.id) {
 						// En caso de ser una actualizacion
@@ -84,6 +96,7 @@ function EditObj() {
 						console.log("Creado");
 					}
 					actions.resetForm();
+					Swal.close();
 				}}
 				// Todas las validaciones de datos para que los datos ingresados sean correctos y puedan ser ingresados en la base de datos
 				validate={(valores) => {
