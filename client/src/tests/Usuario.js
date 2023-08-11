@@ -1,11 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useProducts } from "../context/ProductsContext";
+import LoadingTable from "./LoadingTable";
 
 function Usuario() {
 	const { users, loadUsers } = useProducts();
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		loadUsers();
+		loadUsers().then(() => {
+			setIsLoading(false);
+		});
 	}, [loadUsers]);
 
 	return (
@@ -22,15 +26,19 @@ function Usuario() {
 					</tr>
 				</thead>
 				<tbody>
-					{users.map((user) => (
-						<tr key={user.id_Usuario}>
-							<td>{user.id_Usuario}</td>
-							<td>{user.nombre}</td>
-							<td>{user.telefono}</td>
-							<td>{user.email}</td>
-							<td>{user.contrasena}</td>
-						</tr>
-					))}
+					{isLoading ? (
+						<LoadingTable numRows={10} numCells={5} />
+					) : (
+						users.map((user) => (
+							<tr key={user.id_Usuario}>
+								<td>{user.id_Usuario}</td>
+								<td>{user.nombre}</td>
+								<td>{user.telefono}</td>
+								<td>{user.email}</td>
+								<td>{user.contrasena}</td>
+							</tr>
+						))
+					)}
 				</tbody>
 			</table>
 		</div>

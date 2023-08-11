@@ -23,7 +23,7 @@ function ListProduct() {
 				</h1>
 				<CustomCarousel />
 				<div className="row text-center">
-					{/* //? Lo de aqui son los componentes de la lista de catalogo */}
+					{/* Lo de aqui son los componentes de la lista de catalogo */}
 					{isLoading ? (
 						<>
 							<LoadingList />
