@@ -29,7 +29,7 @@ function Detalles() {
 						<div className="square-image-container d-flex justify-content-center align-items-center">
 							<img
 								src={oneProduct.urlImg}
-								className="img-fluid square-image"
+								className="square-image"
 								alt="Producto"
 								style={{ maxHeight: "100%", maxWidth: "100%" }}
 							/>
