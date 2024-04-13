@@ -30,7 +30,7 @@ function Detalles() {
 							<img
 								src={oneProduct.urlImg}
 								className="square-image"
-								alt="Producto"
+								alt={oneProduct.nombreImg}
 								style={{ maxHeight: "100%", maxWidth: "100%" }}
 							/>
 						</div>
